@@ -7,7 +7,7 @@ DOCKER_REPO=${DOCKER_REPO:-accetto/xubuntu-vnc-novnc-chromium}
 
 TODAY=$(date +%Y-%m-%d)
 BASETAG=""
-VERSION_STICKER="ubuntu18.04.3-chromium76.0.3809.100"
+VERSION_STICKER="ubuntu18.04.3-chromium77.0.3865.90"
 
 case "$DOCKER_TAG" in
 

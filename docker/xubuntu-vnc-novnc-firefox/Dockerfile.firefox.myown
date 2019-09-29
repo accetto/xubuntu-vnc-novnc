@@ -1,0 +1,13 @@
+# docker build -f Dockerfile.firefox.plus -t accetto/xubuntu-vnc-firefox:myown .
+
+ARG BASETAG=latest
+
+FROM accetto/xubuntu-vnc-novnc-firefox:${BASETAG}
+
+USER 0
+
+COPY [ "./src/firefox.plus/resources/user.js", "${HOME}/firefox.plus/user.js" ]
+
+RUN "${STARTUPDIR}"/set_user_permissions.sh "${HOME}/firefox.plus"
+
+USER 1001

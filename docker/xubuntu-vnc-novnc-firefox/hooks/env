@@ -1,0 +1,44 @@
+### hooks/env
+
+SOURCE_BRANCH=${SOURCE_BRANCH:-$1}
+DOCKER_TAG=${DOCKER_TAG:-$1}
+DOCKERFILE_PATH=${DOCKERFILE_PATH:-./Dockerfile.firefox}
+DOCKER_REPO=${DOCKER_REPO:-accetto/xubuntu-vnc-novnc-firefox}
+
+TODAY=$(date +%Y-%m-%d)
+BASETAG=""
+VERSION_STICKER="ubuntu18.04.3-firefox69.0.1"
+
+case "$DOCKER_TAG" in
+
+    latest | default)
+        BASETAG="latest"
+        IS_SINGLEPROCESS_BUILD=yes
+        ;;
+
+    multiprocess)
+        BASETAG="latest"
+        ;;
+
+    dev | dev-default)
+        BASETAG="dev"
+        IS_SINGLEPROCESS_BUILD=yes
+        ;;
+
+    dev-multiprocess)
+        BASETAG="dev"
+        ;;
+
+    dfw | dfw-default)
+        BASETAG="dfw"
+        IS_SINGLEPROCESS_BUILD=yes
+        ;;
+
+    dfw-multiprocess)
+        BASETAG="dfw"
+        ;;
+
+    *)
+        BASETAG=""
+        ;;
+esac

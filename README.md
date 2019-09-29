@@ -28,6 +28,14 @@ Additional components and applications can be easily added by the user because *
   
 Contains resources for building [accetto/xubuntu-vnc-novnc-chromium][this-docker-xubuntu-vnc-novnc-chromium] images with the open-source [Chromium][chromium] web browser.
 
+#### [xubuntu-vnc-novnc-firefox][this-github-xubuntu-vnc-novnc-firefox]
+  
+Contains resources for building [accetto/xubuntu-vnc-novnc-firefox][this-docker-xubuntu-vnc-novnc-firefox] images with the current [Firefox Quantum][firefox] web browser.
+
+Several variations are available, including the one supporting easy pre-configuration and copying of personal Firefox user preferences.
+
+The images are streamlined and simplified versions of my other images [accetto/ubuntu-vnc-xfce-firefox-plus][accetto-docker-ubuntu-vnc-xfce-firefox-plus] and [accetto/ubuntu-vnc-xfce-firefox-default][accetto-docker-ubuntu-vnc-xfce-firefox-default].
+
 #### [utils][this-github-utils]
   
 Contains utilities that make building the images more convenient.

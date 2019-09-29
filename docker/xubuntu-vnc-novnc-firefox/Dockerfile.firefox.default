@@ -1,0 +1,54 @@
+# ./hooks/build dev
+# ./hooks/build dfw
+
+ARG BASETAG=latest
+
+FROM accetto/xubuntu-vnc-novnc:${BASETAG} as stage-firefox
+
+ARG ARG_MOZ_FORCE_DISABLE_E10S
+
+### Switch to root user before install
+USER 0
+
+### 'apt-get clean' runs automatically
+RUN apt-get update && apt-get install -y \
+        firefox \
+    && apt-get -y autoremove \
+    && rm -rf /var/lib/apt/lists/*
+
+### Alternatively install an explicit Firefox version
+### http://releases.mozilla.org/pub/firefox/releases/67.0.4/linux-x86_64/en-US/firefox-67.0.4.tar.bz2
+# ENV \
+#     FIREFOX_VERSION=67.0.4 \
+#     FIREFOX_DISTRO=linux-x86_64 \
+#     FIREFOX_PATH=/usr/lib/firefox
+# RUN mkdir -p ${FIREFOX_PATH} \
+#     && wget -qO- http://releases.mozilla.org/pub/firefox/releases/${FIREFOX_VERSION}/${FIREFOX_DISTRO}/en-US/firefox-${FIREFOX_VERSION}.tar.bz2 \
+#         | tar xvj -C /usr/lib/ \
+#     && ln -s ${FIREFOX_PATH}/firefox /usr/bin/firefox
+
+### Preconfigure Xfce
+COPY [ "./src/firefox/home/Desktop", "${HOME}/Desktop/" ]
+COPY [ "./src/firefox/home/config/xfce4", "${HOME}/.config/xfce4/" ]
+COPY [ "./src/startup/version_sticker.sh", "${STARTUPDIR}/" ]
+
+### Firefox multi-process causes a lot of "Gah. Your tab just crashed."
+### The only way to disable it since Firefox v68.0 is through this environment variable.
+ENV MOZ_FORCE_DISABLE_E10S=${ARG_MOZ_FORCE_DISABLE_E10S:+1}
+
+### Fix permissions
+RUN \
+    chmod a+wx "${STARTUPDIR}"/version_sticker.sh \
+    && "${STARTUPDIR}"/set_user_permissions.sh "${STARTUPDIR}" "${HOME}"
+
+FROM stage-firefox as stage-final
+
+ARG ARG_REFRESHED_AT
+ARG ARG_VERSION_STICKER
+
+ENV \
+    REFRESHED_AT=${ARG_REFRESHED_AT} \
+    VERSION_STICKER=${ARG_VERSION_STICKER}
+
+### Switch to default application user (non-root)
+USER 1001
