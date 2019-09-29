@@ -1,0 +1,27 @@
+### hooks/env
+
+SOURCE_BRANCH=${SOURCE_BRANCH:-$1}
+DOCKER_TAG=${DOCKER_TAG:-$1}
+DOCKERFILE_PATH=${DOCKERFILE_PATH:-./Dockerfile}
+DOCKER_REPO=${DOCKER_REPO:-accetto/xubuntu-vnc-novnc}
+
+TODAY=$(date +%Y-%m-%d)
+BASETAG=""
+VERSION_STICKER="ubuntu18.04.3"
+
+case "$DOCKER_TAG" in
+
+    latest | dev | dfw)
+        BASETAG="latest"
+        SUPPORT_USER_GROUP_OVERRIDE=
+        ;;
+
+    lab | dev-lab | dfw-lab)
+        BASETAG="latest"
+        SUPPORT_USER_GROUP_OVERRIDE="yes"
+        ;;
+
+    *)
+        BASETAG=""
+        ;;
+esac
