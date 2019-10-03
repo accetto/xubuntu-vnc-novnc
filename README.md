@@ -2,7 +2,11 @@
 
 ## Project `accetto/xubuntu-vnc-novnc`
 
-[Git Hub][this-github] - [Changelog][this-changelog] - [Wiki][this-wiki] - [Hierarchy][this-wiki-image-hierarchy]
+[Docker Hub][this-docker] - [Git Hub][this-github] - [Changelog][this-changelog] - [Wiki][this-wiki] - [Hierarchy][this-wiki-image-hierarchy]
+
+***
+
+**TIP** Unless you need [noVNC][novnc], you can also use my other images from the project [accetto/xubuntu-vnc][accetto-github-xubuntu-vnc] ([image hierarchy][accetto-xubuntu-vnc-wiki-image-hierarchy]).
 
 ***
 
@@ -10,7 +14,7 @@ This project repository contains resources for building various Docker images ba
 
 The resources for the individual images and their variations are stored in the subfolders of the [Git Hub][this-github] repository and the image features are described in the individual README files. Additional descriptions can be found in the common project [Wiki][this-wiki].
 
-All images are part of the growing [image hierarchy][this-wiki-image-hierarchy].
+All images are part of a growing [image hierarchy][this-wiki-image-hierarchy].
 
 ### Git Hub subfolders / Docker image sets
 
@@ -62,6 +66,8 @@ Credit goes to all the countless people and companies, who contribute to open so
 
 ***
 
+[this-docker]: https://hub.docker.com/u/accetto/
+
 [this-github]: https://github.com/accetto/xubuntu-vnc-novnc/
 [this-changelog]: https://github.com/accetto/xubuntu-vnc-novnc/blob/master/CHANGELOG.md
 
@@ -84,6 +90,9 @@ Credit goes to all the countless people and companies, who contribute to open so
 [accetto-docker-ubuntu-vnc-xfce]: https://hub.docker.com/r/accetto/ubuntu-vnc-xfce
 [accetto-docker-ubuntu-vnc-xfce-firefox-default]: https://hub.docker.com/r/accetto/ubuntu-vnc-xfce-firefox-default
 [accetto-docker-ubuntu-vnc-xfce-firefox-plus]: https://hub.docker.com/r/accetto/ubuntu-vnc-xfce-firefox-plus
+
+[accetto-github-xubuntu-vnc]: https://github.com/accetto/xubuntu-vnc/
+[accetto-xubuntu-vnc-wiki-image-hierarchy]: https://github.com/accetto/xubuntu-vnc/wiki/Image-hierarchy
 
 [accetto-docker-argbash-docker]: https://hub.docker.com/r/accetto/argbash-docker
 [accetto-github-argbash-docker-utils]: https://github.com/accetto/argbash-docker/tree/master/utils

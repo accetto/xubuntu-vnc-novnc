@@ -2,9 +2,13 @@
 
 ## Project `accetto/xubuntu-vnc-novnc`
 
-[Git Hub][this-github] - [Wiki][this-wiki] - [Hierarchy][this-wiki-image-hierarchy]
+[Docker Hub][this-docker] - [Git Hub][this-github] - [Wiki][this-wiki] - [Hierarchy][this-wiki-image-hierarchy]
 
 ***
+
+### Version 19.10.1
+
+- README updated
 
 ### Release 19.10
 
@@ -21,6 +25,8 @@
   - initial image with **Chromium Browser** version **76.0.3809.100**
 
 ***
+
+[this-docker]: https://hub.docker.com/u/accetto/
 
 [this-github]: https://github.com/accetto/xubuntu-vnc-novnc/
 [this-wiki]: https://github.com/accetto/xubuntu-vnc-novnc/wiki
