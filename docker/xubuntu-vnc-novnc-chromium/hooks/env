@@ -5,22 +5,18 @@ DOCKER_TAG=${DOCKER_TAG:-$1}
 DOCKERFILE_PATH=${DOCKERFILE_PATH:-./Dockerfile.chromium}
 DOCKER_REPO=${DOCKER_REPO:-accetto/xubuntu-vnc-novnc-chromium}
 
-TODAY=$(date +%Y-%m-%d)
 BASETAG=""
-VERSION_STICKER="ubuntu18.04.3-chromium77.0.3865.90"
+TODAY=$(date +%Y-%m-%d)
 
-case "$DOCKER_TAG" in
+### Warning! The values must be explicit strings (used by utils).
+VERSION_STICKER_LATEST="ubuntu18.04.3-chromium77.0.3865.90"
 
-    latest)
-        BASETAG="latest"
-        ;;
+VERSION_STICKER="${VERSION_STICKER_LATEST}"
 
-    dev)
-        BASETAG="dev"
-        ;;
+case "${DOCKER_TAG}" in
 
-    dfw)
-        BASETAG="dfw"
+    latest | dev | dfw | nux)
+        BASETAG="${DOCKER_TAG}"
         ;;
 
     *)

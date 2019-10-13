@@ -6,6 +6,19 @@
 
 ***
 
+### Release 19.10.2
+
+- All images:
+  - badges re-designed
+    - previous badges removed and new status badges from `badge.net` and `shields.io` introduced
+    - `commit` badge from `microbadger.com` introduced (per tag)
+    - `version sticker` badge introduced (as static badge from `badge.net`)
+    - remark: it can take several hours until new badges are actually shown (caused by caching)
+  - build hooks updated
+  - script **util-refresh-readme.sh** introduced
+- Updated versions
+  - Firefox **69.0.2**
+
 ### Release 19.10.1
 
 - README updated

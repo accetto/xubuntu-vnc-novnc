@@ -6,6 +6,11 @@
 
 ***
 
+![badge-docker-pulls][badge-docker-pulls]
+![badge-docker-stars][badge-docker-stars]
+![badge-github-release][badge-github-release]
+![badge-github-release-date][badge-github-release-date]
+
 **TIP** Unless you need [noVNC][novnc], you can also use a slimmer image [accetto/xubuntu-vnc-firefox][accetto-docker-xubuntu-vnc-firefox], which is a member of another growing family of application images ([image hierarchy][accetto-xubuntu-vnc-wiki-image-hierarchy]).
 
 ***
@@ -37,15 +42,18 @@ The following image tags are regularly maintained and rebuilt:
 
 - `latest` is based on `accetto/xubuntu-vnc-novnc:latest`, it includes the **plus** features and it is built with the build argument **ARG_MOZ_FORCE_DISABLE_E10S**, so the Firefox multiprocess is **disabled** (see below)
 
-    [![version badge](https://images.microbadger.com/badges/version/accetto/xubuntu-vnc-novnc-firefox:latest.svg)](https://microbadger.com/images/accetto/xubuntu-vnc-novnc-firefox:latest "Get your own version badge on microbadger.com") [![size badge](https://images.microbadger.com/badges/image/accetto/xubuntu-vnc-novnc-firefox:latest.svg)](https://microbadger.com/images/accetto/xubuntu-vnc-novnc-firefox:latest "Get your own image badge on microbadger.com")
+    ![badge-VERSION_STICKER_LATEST][badge-VERSION_STICKER_LATEST]
+    ![badge-github-commit-latest][badge-github-commit-latest]
 
-- `default` is similar to `latest`, but it doesn't include the **plus** features  
+- `default` is similar to `latest`, but it doesn't include the **plus** features
 
-    [![version badge](https://images.microbadger.com/badges/version/accetto/xubuntu-vnc-novnc-firefox:default.svg)](https://microbadger.com/images/accetto/xubuntu-vnc-novnc-firefox:default "Get your own version badge on microbadger.com") [![size badge](https://images.microbadger.com/badges/image/accetto/xubuntu-vnc-novnc-firefox:default.svg)](https://microbadger.com/images/accetto/xubuntu-vnc-novnc-firefox:default "Get your own image badge on microbadger.com")
+    ![badge-VERSION_STICKER_DEFAULT][badge-VERSION_STICKER_DEFAULT]
+    ![badge-github-commit-default][badge-github-commit-default]
 
-- `multiprocess` is also similar to `latest`, but it is not built with the build argument **ARG_MOZ_FORCE_DISABLE_E10S**, so the Firefox multiprocess is **enabled**  
+- `multiprocess` is also similar to `latest`, but it is not built with the build argument **ARG_MOZ_FORCE_DISABLE_E10S**, so the Firefox multiprocess is **enabled**
 
-    [![version badge](https://images.microbadger.com/badges/version/accetto/xubuntu-vnc-novnc-firefox:multiprocess.svg)](https://microbadger.com/images/accetto/xubuntu-vnc-novnc-firefox:multiprocess "Get your own version badge on microbadger.com") [![size badge](https://images.microbadger.com/badges/image/accetto/xubuntu-vnc-novnc-firefox:multiprocess.svg)](https://microbadger.com/images/accetto/xubuntu-vnc-novnc-firefox:multiprocess "Get your own image badge on microbadger.com")
+    ![badge-VERSION_STICKER_MULTIPROCESS][badge-VERSION_STICKER_MULTIPROCESS]
+    ![badge-github-commit-multiprocess][badge-github-commit-multiprocess]
 
 ### Dockerfiles
 
@@ -196,3 +204,33 @@ Credit goes to all the countless people and companies, who contribute to open so
 [xfce]: http://www.xfce.org
 
 [firefox]: https://www.mozilla.org
+
+<!-- docker badges -->
+
+[badge-docker-pulls]: https://badgen.net/docker/pulls/accetto/xubuntu-vnc-novnc-firefox?icon=docker&label=pulls
+
+[badge-docker-stars]: https://badgen.net/docker/stars/accetto/xubuntu-vnc-novnc-firefox?icon=docker&label=stars
+
+<!-- github badges -->
+
+[badge-github-release]: https://badgen.net/github/release/accetto/xubuntu-vnc-novnc?icon=github&label=release
+
+[badge-github-release-date]: https://img.shields.io/github/release-date/accetto/xubuntu-vnc-novnc?logo=github
+
+<!-- latest tag badges -->
+
+[badge-VERSION_STICKER_LATEST]: https://badgen.net/badge/version%20sticker/ubuntu18.04.3-firefox69.0.2/blue
+
+[badge-github-commit-latest]: https://images.microbadger.com/badges/commit/accetto/xubuntu-vnc-novnc-firefox.svg
+
+<!-- default tag badges -->
+
+[badge-VERSION_STICKER_DEFAULT]: https://badgen.net/badge/version%20sticker/ubuntu18.04.3-firefox69.0.2/blue
+
+[badge-github-commit-default]: https://images.microbadger.com/badges/commit/accetto/xubuntu-vnc-novnc-firefox:default.svg
+
+<!-- multiprocess tag badges -->
+
+[badge-VERSION_STICKER_MULTIPROCESS]: https://badgen.net/badge/version%20sticker/ubuntu18.04.3-firefox69.0.2/blue
+
+[badge-github-commit-multiprocess]: https://images.microbadger.com/badges/commit/accetto/xubuntu-vnc-novnc-firefox:multiprocess.svg

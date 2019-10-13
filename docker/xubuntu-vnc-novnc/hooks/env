@@ -5,19 +5,26 @@ DOCKER_TAG=${DOCKER_TAG:-$1}
 DOCKERFILE_PATH=${DOCKERFILE_PATH:-./Dockerfile}
 DOCKER_REPO=${DOCKER_REPO:-accetto/xubuntu-vnc-novnc}
 
-TODAY=$(date +%Y-%m-%d)
 BASETAG=""
-VERSION_STICKER="ubuntu18.04.3"
+TODAY=$(date +%Y-%m-%d)
 
-case "$DOCKER_TAG" in
+### Warning! The values must be explicit strings (used by utils).
+VERSION_STICKER_LATEST="ubuntu18.04.3"
+VERSION_STICKER_LAB="ubuntu18.04.3"
 
-    latest | dev | dfw)
+VERSION_STICKER="${VERSION_STICKER_LATEST}"
+
+case "${DOCKER_TAG}" in
+
+    latest | dev | dfw | nux)
         BASETAG="latest"
+        VERSION_STICKER="${VERSION_STICKER_LATEST}"
         SUPPORT_USER_GROUP_OVERRIDE=
         ;;
 
-    lab | dev-lab | dfw-lab)
+    lab | dev-lab | dfw-lab | nux-lab)
         BASETAG="latest"
+        VERSION_STICKER="${VERSION_STICKER_LAB}"
         SUPPORT_USER_GROUP_OVERRIDE="yes"
         ;;
 

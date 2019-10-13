@@ -1,5 +1,6 @@
 # ./hooks/build dev
 # ./hooks/build dfw
+# ./hooks/build nux
 
 ARG BASETAG=latest
 
@@ -32,6 +33,11 @@ FROM stage-chromium as stage-final
 
 ARG ARG_REFRESHED_AT
 ARG ARG_VERSION_STICKER
+ARG ARG_VCS_REF
+
+LABEL \
+    org.label-schema.vcs-ref="${ARG_VCS_REF}" \
+    version-sticker="${ARG_VERSION_STICKER}"
 
 ENV \
     REFRESHED_AT=${ARG_REFRESHED_AT} \

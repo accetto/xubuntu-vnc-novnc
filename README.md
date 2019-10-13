@@ -6,6 +6,16 @@
 
 ***
 
+![badge-github-release][badge-github-release]
+![badge-github-release-date][badge-github-release-date]
+![badge-github-stars][badge-github-stars]
+![badge-github-forks][badge-github-forks]
+![badge-github-open-issues][badge-github-open-issues]
+![badge-github-closed-issues][badge-github-closed-issues]
+![badge-github-releases][badge-github-releases]
+![badge-github-commits][badge-github-commits]
+![badge-github-last-commit][badge-github-last-commit]
+
 **TIP** Unless you need [noVNC][novnc], you can also use my other images from the project [accetto/xubuntu-vnc][accetto-github-xubuntu-vnc] ([image hierarchy][accetto-xubuntu-vnc-wiki-image-hierarchy]).
 
 ***
@@ -45,14 +55,18 @@ The images are streamlined and simplified versions of my other images [accetto/u
 Contains utilities that make building the images more convenient.
 
 - `util-hdx.sh`  
-  
+
   Displays the file head and executes the chosen line, removing the first occurrence of '#' and trimming the line from left first. Providing the line number argument skips the interaction and executes the given line directly.
   
   The comment lines at the top of included Dockerfiles are intended for this utility.
 
-Each utility displays the help if started with the `-h` or `--help` argument.
+  The utility displays the help if started with the `-h` or `--help` argument. It has been developed using my other utilities `utility-argbash-init.sh` and `utility-argbash.sh`, contained in the [accetto/argbash-docker][accetto-github-argbash-docker-utils] Git Hub repository, from which the [accetto/argbash-docker][accetto-docker-argbash-docker] Docker image is built.
 
-The utilities have been developed using my other utilities `utility-argbash-init.sh` and `utility-argbash.sh`, contained in the [accetto/argbash-docker][accetto-github-argbash-docker-utils] Git Hub repository, from which the [accetto/argbash-docker][accetto-docker-argbash-docker] Docker image is built.
+- `util-refresh-readme.sh`  
+  
+  This script can be used for updating the `version sticker` badges in README files. It is intended for local use before publishing the repository.
+
+  The script does not include any help, because it takes only a single argument - the path where to start searching for files (default is `../docker`).
 
 ## Issues
 
@@ -113,3 +127,23 @@ Credit goes to all the countless people and companies, who contribute to open so
 [typescript]: https://www.typescriptlang.org/
 [vscode]: https://code.visualstudio.com/
 [xfce]: http://www.xfce.org
+
+<!-- github badges -->
+
+[badge-github-release]: https://badgen.net/github/release/accetto/xubuntu-vnc-novnc?icon=github&label=release
+
+[badge-github-release-date]: https://img.shields.io/github/release-date/accetto/xubuntu-vnc-novnc?logo=github
+
+[badge-github-stars]: https://badgen.net/github/stars/accetto/xubuntu-vnc-novnc?icon=github&label=stars
+
+[badge-github-forks]: https://badgen.net/github/forks/accetto/xubuntu-vnc-novnc?icon=github&label=forks
+
+[badge-github-releases]: https://badgen.net/github/releases/accetto/xubuntu-vnc-novnc?icon=github&label=releases
+
+[badge-github-commits]: https://badgen.net/github/commits/accetto/xubuntu-vnc-novnc?icon=github&label=commits
+
+[badge-github-last-commit]: https://badgen.net/github/last-commit/accetto/xubuntu-vnc-novnc?icon=github&label=last%20commit
+
+[badge-github-closed-issues]: https://badgen.net/github/closed-issues/accetto/xubuntu-vnc-novnc?icon=github&label=closed%20issues
+
+[badge-github-open-issues]: https://badgen.net/github/open-issues/accetto/xubuntu-vnc-novnc?icon=github&label=open%20issues
