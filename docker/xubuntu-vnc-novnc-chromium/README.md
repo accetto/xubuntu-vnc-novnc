@@ -66,15 +66,33 @@ The containers do not create or use any external volumes by default. However, th
 
 Both **named volumes** and **bind mounts** can be used. More about volumes can be found in the [Docker documentation][docker-doc] (e.g. [Manage data in Docker][docker-doc-managing-data]).
 
+### Container user accounts
+
+Containers created from these images run under the non-root **default application user** (headless, 1001:0). However, the **sudo** command allows user elevation. For more description check the base image [accetto/xubuntu-vnc-novnc][accetto-docker-xubuntu-vnc-novnc] or [Wiki][this-wiki].
+
+### Version sticker
+
+Version sticker serves multiple purposes that are closer described in [Wiki][this-wiki]. The **version sticker value** identifies the version of the docker image and it is persisted in it when it is built. It is also shown as a badge in the README file.
+
+However, the script `version_sticker.sh` can be used anytime for convenient checking of the current versions of installed applications.
+
+The script is deployed into the startup folder, which is defined by the environment variable `STARTUPDIR` with the default value of `/dockerstartup`.
+
+If the script is executed inside a container without an argument, then it returns the **current version sticker value** of the container. This value is newly calculated and it is based on the current versions of the essential applications in the container.
+
+The **current** version sticker value will differ from the **persisted** value, if any of the included application has been updated to another version.
+
+If the script is called with the argument `-v` (lower case `v`), then it prints out verbose versions of the essential applications that are included in the **version sticker value**.
+
+If it is called with the argument `-V` (upper case `v`), then it prints out verbose versions of some more applications.
+
+Examples can be found in [Wiki][this-wiki].
+
 ## Using headless containers
 
 There are two ways, how to use the created headless containers. Please refer to the base image [accetto/xubuntu-vnc-novnc][accetto-docker-xubuntu-vnc-novnc] to learn about them.
 
 Note that the default **VNC user** password is **headless**.
-
-### Container user accounts
-
-Containers created from these images run under the non-root **default application user** (headless, 1001:0). However, the **sudo** command allows user elevation. For more description check the base image [accetto/xubuntu-vnc-novnc][accetto-docker-xubuntu-vnc-novnc] or [Wiki][this-wiki].
 
 ## Issues
 

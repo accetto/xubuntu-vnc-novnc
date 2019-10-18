@@ -6,6 +6,15 @@
 
 ***
 
+### Release 19.10.3
+
+- All images:
+  - README updated
+    - **version sticker** described
+    - new badges added
+  - build hooks updated
+    - command line arguments passed to `build` hook
+
 ### Release 19.10.2
 
 - All images:
