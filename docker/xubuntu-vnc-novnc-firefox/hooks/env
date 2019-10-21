@@ -4,7 +4,6 @@ SOURCE_BRANCH=${SOURCE_BRANCH:-$1}
 DOCKER_TAG=${DOCKER_TAG:-$1}
 if [[ -n "$1" ]] ; then shift ; fi
 
-DOCKERFILE_PATH=${DOCKERFILE_PATH:-./Dockerfile.firefox}
 DOCKER_REPO=${DOCKER_REPO:-accetto/xubuntu-vnc-novnc-firefox}
 
 BASETAG=""
@@ -20,14 +19,17 @@ case "${DOCKER_TAG}" in
 
     latest | dev | dfw | nux)
         VERSION_STICKER="${VERSION_STICKER_LATEST}"
+        DOCKERFILE_PATH=${DOCKERFILE_PATH:-./Dockerfile.firefox}
         ;;
 
     default | dev-default | dfw-default | nux-default)
         VERSION_STICKER="${VERSION_STICKER_DEFAULT}"
+        DOCKERFILE_PATH=${DOCKERFILE_PATH:-./Dockerfile.firefox.default}
         ;;
 
     multiprocess | dev-multiprocess | dfw-multiprocess | nux-multiprocess)
         VERSION_STICKER="${VERSION_STICKER_MULTIPROCESS}"
+        DOCKERFILE_PATH=${DOCKERFILE_PATH:-./Dockerfile.firefox}
         ;;
 esac
 

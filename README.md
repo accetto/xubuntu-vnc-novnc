@@ -36,6 +36,8 @@ The images are streamlined and simplified versions of my other images [accetto/u
 
 Several variations are available, including the one supporting overriding both the container user and the user group.
 
+These base images already include commonly used utilities **ping**, **wget**, **zip**, **unzip**, **sudo**, [curl][curl], [git][git] and also the current version of [jq][jq] JSON processor.
+
 Additional components and applications can be easily added by the user because **sudo** is supported.
 
 #### [xubuntu-vnc-novnc-chromium][this-github-xubuntu-vnc-novnc-chromium]
@@ -113,19 +115,14 @@ Credit goes to all the countless people and companies, who contribute to open so
 
 [docker-ubuntu]: https://hub.docker.com/_/ubuntu/
 
-[angular]: https://angular.io/
-[chromium]: https://www.chromium.org/Home
+[curl]: http://manpages.ubuntu.com/manpages/bionic/man1/curl.1.html
+[git]: https://git-scm.com/
 [inkscape]: https://inkscape.org/
+[jq]: https://stedolan.github.io/jq/
 [firefox]: https://www.mozilla.org
 [git]: https://git-scm.com/
-[heroku-cli]: https://devcenter.heroku.com/articles/heroku-cli
-[nodejs]: https://nodejs.org/en/
 [novnc]: https://github.com/kanaka/noVNC
-[npm]: https://www.npmjs.com/
-[postgresql]: https://www.postgresql.org/
 [tigervnc]: http://tigervnc.org
-[typescript]: https://www.typescriptlang.org/
-[vscode]: https://code.visualstudio.com/
 [xfce]: http://www.xfce.org
 
 <!-- github badges -->

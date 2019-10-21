@@ -23,14 +23,15 @@ The images are part of the growing [image hierarchy][this-wiki-image-hierarchy] 
 
 The `latest` image inherits among others
 
-- utilities **ping**, **zip**, **unzip**, **sudo**
-- popular text editor [vim][vim]
-- lite but advanced graphical editor [mousepad][mousepad]
-- [tini][tini] as the entry-point initial process (PID 1)
+- utilities **ping**, **wget**, **zip**, **unzip**, **sudo**, [curl][curl], [git][git] (Ubuntu distribution)
+- current version of JSON processor [jq][jq]
+- popular text editor [vim][vim] (Ubuntu distribution)
+- lite but advanced graphical editor [mousepad][mousepad] (Ubuntu distribution)
+- current version of [tini][tini] as the entry-point initial process (PID 1)
 
 and adds
 
-- [Firefox Quantum][firefox] web browser and some additional **plus** features described below
+- current version of [Firefox Quantum][firefox] web browser and some additional **plus** features described below
 
 The history of notable changes is documented in the [CHANGELOG][this-changelog].
 
@@ -71,7 +72,7 @@ The [Git Hub][this-github-xubuntu-vnc-novnc-firefox] repository contains several
   
   This Dockerfile is for building the `default` image tag, which is also based on the `accetto/xubuntu-vnc-novnc:latest`, but it does not include the **plus** features.
 
-- `Dockerfile.firefox.myown` can be used for building images with own Firefox preferences
+- `Dockerfile.firefox.myown` can be used for building images with your own Firefox preferences already built-in
 
 ### Ports
 
@@ -213,6 +214,10 @@ Credit goes to all the countless people and companies, who contribute to open so
 
 [firefox-doc-preferences]: https://developer.mozilla.org/en-US/docs/Mozilla/Preferences/A_brief_guide_to_Mozilla_preferences
 
+[curl]: http://manpages.ubuntu.com/manpages/bionic/man1/curl.1.html
+[firefox]: https://www.mozilla.org
+[git]: https://git-scm.com/
+[jq]: https://stedolan.github.io/jq/
 [mousepad]: https://github.com/codebrainz/mousepad
 [novnc]: https://github.com/kanaka/noVNC
 [tigervnc]: http://tigervnc.org
@@ -220,8 +225,6 @@ Credit goes to all the countless people and companies, who contribute to open so
 [tini]: https://github.com/krallin/tini
 [vim]: https://www.vim.org/
 [xfce]: http://www.xfce.org
-
-[firefox]: https://www.mozilla.org
 
 <!-- docker badges -->
 

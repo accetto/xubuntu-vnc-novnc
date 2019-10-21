@@ -6,6 +6,22 @@
 
 ***
 
+### Release 19.10.4
+
+- **xubuntu-vnc-novnc**
+  - **ubuntu** base image updated (inherited by all images)
+  - **curl** and **git** added (inherited by all images)
+  - **jq** (JSON processor) added in its latest version **1.6** (inherited by all images)
+  - **version_of.sh** script handles also **jq** (inherited by all images)
+  - **version_sticker.sh** reports added apps (similar update by all images)
+  - `test` build hook updated (similar update by all images)
+  - README file updated (similar update by all images)
+- **xubuntu-vnc-novnc-chromium**
+  - inherited new features from the base (see above)
+- **xubuntu-vnc-novnc-firefox**
+  - inherited new features from the base (see above)
+  - `env` build hook updated
+
 ### Release 19.10.3
 
 - All images:

@@ -21,14 +21,15 @@ The images are part of the growing [image hierarchy][this-wiki-image-hierarchy] 
 
 The `latest` image inherits among others
 
-- utilities **ping**, **zip**, **unzip**, **sudo**
-- popular text editor [vim][vim]
-- lite but advanced graphical editor [mousepad][mousepad]
-- [tini][tini] as the entry-point initial process (PID 1)
+- utilities **ping**, **wget**, **zip**, **unzip**, **sudo**, [curl][curl], [git][git] (Ubuntu distribution)
+- current version of JSON processor [jq][jq]
+- popular text editor [vim][vim] (Ubuntu distribution)
+- lite but advanced graphical editor [mousepad][mousepad] (Ubuntu distribution)
+- current version of [tini][tini] as the entry-point initial process (PID 1)
 
 and adds
 
-- [Chromium][chromium] open-source web browser
+- current version of [Chromium][chromium] open-source web browser
 
 The history of notable changes is documented in the [CHANGELOG][this-changelog].
 
