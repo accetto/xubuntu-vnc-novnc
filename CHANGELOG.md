@@ -6,6 +6,13 @@
 
 ***
 
+### Release 19.10.5
+
+- All images:
+  - **version_sticker.sh** script updated (`websockify` also displayed with `-V`)
+- Updated versions
+  - Firefox **70.0**
+
 ### Release 19.10.4
 
 - **xubuntu-vnc-novnc**

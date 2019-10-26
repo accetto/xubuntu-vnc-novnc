@@ -12,6 +12,7 @@ case "$1" in
         vim=$("${STARTUPDIR}/version_of.sh" vim)
         tigervnc=$("${STARTUPDIR}/version_of.sh" tigervnc)
         novnc=$("${STARTUPDIR}/version_of.sh" novnc)
+        websockify=$("${STARTUPDIR}/version_of.sh" websockify)
         curl=$("${STARTUPDIR}/version_of.sh" curl)
         git=$("${STARTUPDIR}/version_of.sh" git)
         jq=$("${STARTUPDIR}/version_of.sh" jq)
@@ -20,6 +21,7 @@ case "$1" in
         echo "VIM $vim"
         echo "TigerVNC $tigervnc"
         echo "noVNC $novnc"
+        echo "websockify $websockify"
         echo "curl $curl"
         echo "Git $git"
         echo "jq $jq"
