@@ -6,6 +6,14 @@
 
 ***
 
+### Release 19.11
+
+- All images:
+  - **ubuntu** base image updated
+- Updated versions
+  - Chromium Browser **78.0.3904.70**
+  - Firefox **70.0.1**
+
 ### Release 19.10.5
 
 - All images:
