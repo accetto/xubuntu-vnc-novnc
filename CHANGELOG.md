@@ -6,6 +6,14 @@
 
 ***
 
+### Release 19.11.1
+
+- All images:
+  - simplified output of `vnc_startup.sh` script
+  - bottom panel's auto-hide behavior changed from `Intelligently` to `Always`
+- Updated versions
+  - Chromium Browser **78.0.3904.97**
+
 ### Release 19.11
 
 - All images:
