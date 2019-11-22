@@ -6,6 +6,11 @@
 
 ***
 
+### Release 19.11.2
+
+- Updated versions
+  - Chromium Browser **78.0.3904.108**
+
 ### Release 19.11.1
 
 - All images:
