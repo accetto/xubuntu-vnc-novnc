@@ -6,9 +6,14 @@
 
 ***
 
+### Release 19.11.3
+
+- All images:
+  - **TigerVNC** server and client updated to version **1.10.0**
+
 ### Release 19.11.2
 
-- Updated versions
+- Updated versions:
   - Chromium Browser **78.0.3904.108**
 
 ### Release 19.11.1
