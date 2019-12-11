@@ -6,6 +6,11 @@
 
 ***
 
+### Release 19.12
+
+- Updated versions:
+  - Firefox **71.0**
+
 ### Release 19.11.3
 
 - All images:
