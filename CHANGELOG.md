@@ -6,6 +6,12 @@
 
 ***
 
+### Release 19.12.1
+
+- **Ubuntu** base image has been updated
+- Updated versions:
+  - Chromium Browser **79.0.3945.79**
+
 ### Release 19.12
 
 - Updated versions:
