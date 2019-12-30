@@ -13,6 +13,8 @@
     - version still incorrectly reported as **1.10.0** (see [issue #925](https://github.com/TigerVNC/tigervnc/issues/925))
   - **vnc_startup.sh** and some other session related stuff updated
   - **Dockerfile** updated
+  - **VNC_RESOLUTION** default value changed to **1360x768**
+  - bottom desktop panel (panel 2) removed
 - all other images inherited the above changes
 
 ### Release 19.12.1
