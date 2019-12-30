@@ -60,6 +60,10 @@ case "$1" in
         ### source example: psql (PostgreSQL) 10.10 (Ubuntu 10.10-0ubuntu0.18.04.1)
         echo $(psql --version 2>/dev/null | grep -Po '(?<=psql \(PostgreSQL\)\s)[0-9.]+')
         ;;
+    ristretto)
+        ### source example: ristretto 0.8.2
+        echo $(ristretto --version 2>/dev/null | grep -Po '[0-9.]+$')
+        ;;
     tigervnc | tiger-vnc | vncserver | vnc-server | vnc)
         ### source example: Xvnc TigerVNC 1.9.0 - built Jul 16 2018 14:18:04
         echo $(vncserver -version 2>/dev/null | grep -Po '(?<=Xvnc TigerVNC\s)[0-9.]+')
@@ -79,5 +83,9 @@ case "$1" in
     websockify)
         ### source example: 0.8.0
         echo $(cat "${NO_VNC_HOME}"/utils/websockify/CHANGES.txt 2>/dev/null | grep -Po -m1 '^[0-9.]+')
+        ;;
+    xfce4-screenshooter | screenshooter | screenshot)
+        ### source example: xfce4-screenshooter 1.8.2
+        echo $(xfce4-screenshooter --version 2>/dev/null | grep -Po '[0-9.]+$')
         ;;
 esac

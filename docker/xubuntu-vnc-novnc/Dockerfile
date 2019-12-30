@@ -74,11 +74,13 @@ ENV \
 
 ### 'apt-get clean' runs automatically
 RUN apt-get update && apt-get install -y \
-        mousepad \
         locales \
         supervisor \
         xfce4 \
         xfce4-terminal \
+        xfce4-screenshooter \
+        mousepad \
+        ristretto \
     && locale-gen en_US.UTF-8 \
     && apt-get purge -y \
         pm-utils \
