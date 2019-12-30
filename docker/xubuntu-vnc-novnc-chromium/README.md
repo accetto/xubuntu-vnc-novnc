@@ -25,6 +25,7 @@ The `latest` image inherits among others
 - current version of JSON processor [jq][jq]
 - popular text editor [vim][vim] (Ubuntu distribution)
 - lite but advanced graphical editor [mousepad][mousepad] (Ubuntu distribution)
+- [xfce4-screenshooter][screenshooter] and image viewer [ristretto][ristretto] (Ubuntu distribution)
 - current version of [tini][tini] as the entry-point initial process (PID 1)
 
 and adds
@@ -133,6 +134,8 @@ Credit goes to all the countless people and companies, who contribute to open so
 
 [mousepad]: https://github.com/codebrainz/mousepad
 [novnc]: https://github.com/kanaka/noVNC
+[ristretto]: https://docs.xfce.org/apps/ristretto/start
+[screenshooter]: https://docs.xfce.org/apps/screenshooter/start
 [tigervnc]: http://tigervnc.org
 [tightvnc]: http://www.tightvnc.com
 [tini]: https://github.com/krallin/tini

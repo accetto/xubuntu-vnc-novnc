@@ -9,6 +9,8 @@ case "$1" in
         ;;
     -V)
         mousepad=$("${STARTUPDIR}/version_of.sh" mousepad)
+        screenshooter=$("${STARTUPDIR}/version_of.sh" screenshooter)
+        ristretto=$("${STARTUPDIR}/version_of.sh" ristretto)
         vim=$("${STARTUPDIR}/version_of.sh" vim)
         tigervnc=$("${STARTUPDIR}/version_of.sh" tigervnc)
         novnc=$("${STARTUPDIR}/version_of.sh" novnc)
@@ -17,11 +19,13 @@ case "$1" in
         git=$("${STARTUPDIR}/version_of.sh" git)
         jq=$("${STARTUPDIR}/version_of.sh" jq)
         echo "Ubuntu $ubuntu"
-        echo "Mousepad $mousepad"
         echo "VIM $vim"
         echo "TigerVNC $tigervnc"
         echo "noVNC $novnc"
         echo "websockify $websockify"
+        echo "Mousepad $mousepad"
+        echo "Ristretto $ristretto"
+        echo "xfce4-screenshooter $screenshooter"
         echo "curl $curl"
         echo "Git $git"
         echo "jq $jq"

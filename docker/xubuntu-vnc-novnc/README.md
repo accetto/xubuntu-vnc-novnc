@@ -28,6 +28,7 @@ The main features and components of the images are:
 - current version of [noVNC][novnc] HTML5 clients (full and lite) (TCP port **6901**)
 - popular text editor [vim][vim] (Ubuntu distribution)
 - lite but advanced graphical editor [mousepad][mousepad] (Ubuntu distribution)
+- [xfce4-screenshooter][screenshooter] and image viewer [ristretto][ristretto] (Ubuntu distribution)
 - current version of [tini][tini] as the entry-point initial process (PID 1)
 - support for overriding both the container user account and its group
 - support of **version sticker** (see below)
@@ -50,7 +51,7 @@ The following image tags are regularly maintained and rebuilt:
     ![badge-VERSION_STICKER_LAB][badge-VERSION_STICKER_LAB]
     ![badge-github-commit-lab][badge-github-commit-lab]
 
-There are also archive images that are tagged like `ubuntu18.04.2` and similar. Those are previous production images and they can be useful for testing.
+There are also archive images that are tagged like `ubuntu18.04.3` and similar. Those are previous production images and they can be useful for testing.
 
 Sometimes you can also spot tags like `dev`, `lab-dev` and similar. Those are temporary images under development and they should not be used.
 
@@ -287,6 +288,8 @@ Credit goes to all the countless people and companies, who contribute to open so
 [jq]: https://stedolan.github.io/jq/
 [mousepad]: https://github.com/codebrainz/mousepad
 [novnc]: https://github.com/kanaka/noVNC
+[ristretto]: https://docs.xfce.org/apps/ristretto/start
+[screenshooter]: https://docs.xfce.org/apps/screenshooter/start
 [tigervnc]: http://tigervnc.org
 [tightvnc]: http://www.tightvnc.com
 [tini]: https://github.com/krallin/tini

@@ -11,11 +11,15 @@
 - **xubuntu-vnc-novnc**
   - **TigerVNC** version **1.10.1**
     - version still incorrectly reported as **1.10.0** (see [issue #925](https://github.com/TigerVNC/tigervnc/issues/925))
-  - **vnc_startup.sh** and some other session related stuff updated
-  - **Dockerfile** updated
   - **VNC_RESOLUTION** default value changed to **1360x768**
   - bottom desktop panel (panel 2) removed
-- all other images inherited the above changes
+  - **xfce4-screenshooter** added (version **1.8.2** from Ubuntu distribution)
+  - image viewer **Ristretto** added (version **0.8.2** from Ubuntu distribution)
+  - updated files:
+    - **Dockerfile**
+    - **vnc_startup.sh** and some other session related stuff
+    - **version_of.sh** and **version_sticker.sh**
+- all other images inherit the above changes
 
 ### Release 19.12.1
 
