@@ -79,7 +79,7 @@ fi
 
 ### change vnc password
 ### first entry is control, second is view (if only one is valid for both)
-mkdir -p "${HOME}"/.vnc
+mkdir -p "${HOME}/.vnc"
 PASSWD_PATH="${HOME}/.vnc/passwd"
 
 if [[ "${VNC_VIEW_ONLY}" == "true" ]]; then
@@ -91,22 +91,38 @@ fi
 echo "${VNC_PW}" | vncpasswd -f >> "${PASSWD_PATH}"
 chmod 600 "${PASSWD_PATH}"
 
-### start vncserver and noVNC webclient in the background
+XSTARTUP_FILE="${HOME}/.vnc/xstartup"
+if [[ ! -f "${XSTARTUP_FILE}" ]] ; then
+    echo ; echo "Preparing VNC server configuration files ..."
+    vncserver "${DISPLAY}"
+    vncserver -kill "${DISPLAY}"
+    echo "Saving default startup script as ${XSTARTUP_FILE}.old"
+    cp "${XSTARTUP_FILE}" "${XSTARTUP_FILE}.old"
+    echo "Replacing default startup script ${XSTARTUP_FILE}"
+    cat <<'EOF' > "${XSTARTUP_FILE}"
+#!/bin/sh
+unset SESSION_MANAGER
+unset DBUS_SESSION_BUS_ADDRESS
+startxfce4 &
+EOF
+fi
+
+### start noVNC in the background
 echo "Starting noVNC"
 "${NO_VNC_HOME}"/utils/launch.sh --vnc localhost:${VNC_PORT} --listen ${NO_VNC_PORT} &> "${STARTUPDIR}"/no_vnc_startup.log &
 PID_SUB=$!
 
 echo "Starting VNC server ..."
 echo "... remove old VNC locks to be a reattachable container"
-vncserver -kill ${DISPLAY} &> "${STARTUPDIR}"/vnc_startup.log \
-    || rm -rfv /tmp/.X*-lock /tmp/.X11-unix &> "${STARTUPDIR}"/vnc_startup.log \
+vncserver -kill "${DISPLAY}" &> "${STARTUPDIR}/vnc_startup.log" \
+    || rm -rfv /tmp/.X*-lock /tmp/.X11-unix &> "${STARTUPDIR}/vnc_startup.log" \
     || echo "... no locks present"
 
 echo "... VNC params: VNC_COL_DEPTH=${VNC_COL_DEPTH}, VNC_RESOLUTION=${VNC_RESOLUTION}"
 echo "... VNC params: VNC_BLACKLIST_TIMEOUT=${VNC_BLACKLIST_TIMEOUT}, VNC_BLACKLIST_THRESHOLD=${VNC_BLACKLIST_THRESHOLD}"
-vncserver ${DISPLAY} -depth ${VNC_COL_DEPTH} -geometry ${VNC_RESOLUTION} \
-    -BlacklistTimeout ${VNC_BLACKLIST_TIMEOUT} \
-    -BlacklistThreshold ${VNC_BLACKLIST_THRESHOLD} &> "${STARTUPDIR}"/vnc_startup.log
+vncserver "${DISPLAY}" -depth "${VNC_COL_DEPTH}" -geometry "${VNC_RESOLUTION}" \
+    -BlacklistTimeout "${VNC_BLACKLIST_TIMEOUT}" \
+    -BlacklistThreshold "${VNC_BLACKLIST_THRESHOLD}" &> "${STARTUPDIR}/vnc_startup.log"
 
 ### log connect options
 echo "... VNC server started on display ${DISPLAY}"
@@ -116,7 +132,7 @@ echo "Connect via noVNC with http://${VNC_IP}:${NO_VNC_PORT}"
 if [[ ${DEBUG} == true ]] || [[ $1 =~ -t|--tail-log ]]; then
     echo "Display log: ${HOME}/.vnc/*${DISPLAY}.log"
     ### if option `-t` or `--tail-log` block the execution and tail the VNC log
-    tail -f "${STARTUPDIR}"/*.log "${HOME}"/.vnc/*${DISPLAY}.log
+    tail -f "${STARTUPDIR}/*.log" "${HOME}/.vnc/*${DISPLAY}.log"
 fi
 
 if [ -z "$1" ] || [[ $1 =~ -w|--wait ]]; then
