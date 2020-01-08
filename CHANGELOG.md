@@ -6,6 +6,14 @@
 
 ***
 
+### Release 20.01
+
+- **xubuntu-vnc-novnc**
+  - auto-starting again:
+    - Xfsettingsd
+    - User folders update
+- all other images inherit the above changes
+
 ### Release 19.12.2
 
 - **xubuntu-vnc-novnc**
