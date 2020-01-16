@@ -6,6 +6,12 @@
 
 ***
 
+### Release 20.02
+
+- **Ubuntu** base image has been updated
+- Updated versions:
+  - Firefox **72.0.1**
+
 ### Release 20.01
 
 - **xubuntu-vnc-novnc**
