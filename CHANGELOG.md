@@ -6,7 +6,7 @@
 
 ***
 
-### Release 20.02
+### Release 20.01.1
 
 - **Ubuntu** base image has been updated
 - Updated versions:
