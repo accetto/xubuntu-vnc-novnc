@@ -6,6 +6,12 @@
 
 ***
 
+### Release 20.02
+
+- Updated versions:
+  - Chromium Browser **79.0.3945.130**
+  - Firefox **72.0.2**
+
 ### Release 20.01.1
 
 - **Ubuntu** base image has been updated
