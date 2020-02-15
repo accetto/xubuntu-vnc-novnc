@@ -15,6 +15,12 @@
 
 ***
 
+**WARNING** for Windows users
+
+**Docker Desktop** (Docker for Windows) version **2.2.0.0** has introduced a new way of working with host's files. Unfortunately even the current version **2.2.0.3** leaves several issues with **bind mounts** unresolved. For example, I've found that **Firefox profiles** stored in bound host's folders don't persist modifications correctly. Firefox profiles stored in containers itself (writable layer) or on Docker managed volumes work correctly. If you need to use bind mounts, I wouldn't recommend upgrading to version 2.2 yet, because downgrading is not possible. The only way is to completely re-install the last working version **2.1.0.5**. However, you'll loose all the images and containers, so backup them first.
+
+***
+
 This repository contains resources for building Docker images based on [Ubuntu][docker-ubuntu] with [Xfce][xfce] desktop environment and [VNC][tigervnc]/[noVNC][novnc] servers for headless use.
 
 The main image is a streamlined and simplified version of my other image [accetto/ubuntu-vnc-xfce][accetto-docker-ubuntu-vnc-xfce] and it is part of the growing [image hierarchy][this-wiki-image-hierarchy].
@@ -22,6 +28,7 @@ The main image is a streamlined and simplified version of my other image [accett
 The main features and components of the images are:
 
 - utilities **ping**, **wget**, **zip**, **unzip**, **sudo**, [curl][curl], [git][git] (Ubuntu distribution)
+- utility **gdebi** lets  you install local `.deb` packages resolving and installing their dependencies (Ubuntu distribution)
 - current version of JSON processor [jq][jq]
 - light-weight [Xfce][xfce] desktop environment (Ubuntu distribution)
 - current version of high-performance [TigerVNC][tigervnc] server and client
@@ -108,7 +115,13 @@ Examples can be found in [Wiki][this-wiki].
 
 ## Using headless containers
 
-There are two ways, how to use the created headless containers. Note that the default **VNC user** password is **headless**.
+There are two ways, how to use the created headless containers.
+
+The default **VNC user** password is **headless** and it can be changed through the environment variable **VNC_PW**. For example the following container would use a password value **mynewpwd**:
+
+```shell
+docker run -dP -e VNC_PW=mynewpwd accetto/xubuntu-vnc-novnc
+```
 
 ### Over VNC
 
@@ -140,13 +153,15 @@ It's also possible to provide the password through the links:
 
 ## Container user accounts
 
-Containers created from this image run under the **default application user** (headless, 1001:0). The password is set from the environment variable **VNC_PW** (**headless** by default) and it can be changed by the user inside the container using the following command:
+Containers created from this image run under the **default application user** (headless, 1001:0) with the default password set also to **headless**. This password can be changed inside the container using the following command:
 
 ```shell
 passwd
 ```
 
-The **sudo** command allows user elevation, so the default application user can, for example, install new applications.
+Please to not confuse the **default application user** password with the **VNC user** password, because they both have the same default values. However, the former one is used for **sudo** and it can be changed using `passwd` command. The latter one is used for VNC access and it can be changed through the **VNC_PW** environment variable (see above).
+
+The **sudo** command allows user elevation, so the **default application user** can, for example, install new applications.
 
 The following example shows how to install **git**:
 

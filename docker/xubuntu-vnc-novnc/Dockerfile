@@ -30,6 +30,7 @@ RUN apt-get update && apt-get install -y \
         vim \
         zip \
         curl \
+        gdebi-core \
         git \
         wget \
     && apt-get -y autoremove \

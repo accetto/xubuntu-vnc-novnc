@@ -6,6 +6,19 @@
 
 ***
 
+### Release 20.02.1
+
+- **xubuntu-vnc-novnc**
+  - **gdebi** utility for installing local `.deb` packages added 
+  - auto-starting again:
+    - AT-SPI D-Bus Bus
+  - all other images inherit the above changes
+- Updated version:
+  - Chromium Browser **80.0.3987.87**
+  - Firefox **73.0**
+- **README** updated (better explanation of default passwords)
+- container screenshots updated
+
 ### Release 20.02
 
 - Updated versions:

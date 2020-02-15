@@ -18,6 +18,7 @@ case "$1" in
         novnc=$("${STARTUPDIR}/version_of.sh" novnc)
         websockify=$("${STARTUPDIR}/version_of.sh" websockify)
         curl=$("${STARTUPDIR}/version_of.sh" curl)
+        gdebi=$("${STARTUPDIR}/version_of.sh" gdebi)
         git=$("${STARTUPDIR}/version_of.sh" git)
         jq=$("${STARTUPDIR}/version_of.sh" jq)
         echo "Ubuntu $ubuntu"
@@ -29,6 +30,7 @@ case "$1" in
         echo "Ristretto $ristretto"
         echo "xfce4-screenshooter $screenshooter"
         echo "curl $curl"
+        echo "gdebi $gdebi"
         echo "Git $git"
         echo "jq $jq"
         echo "Chromium $chromium"
