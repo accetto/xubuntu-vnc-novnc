@@ -12,6 +12,7 @@
   - **gdebi** utility for installing local `.deb` packages added 
   - auto-starting again:
     - AT-SPI D-Bus Bus
+  - desktop launcher for version sticker script (verbose) added
   - all other images inherit the above changes
 - **README** updated (better explanation of default passwords)
 - container screenshots updated
