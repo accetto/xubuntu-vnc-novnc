@@ -13,11 +13,11 @@
   - auto-starting again:
     - AT-SPI D-Bus Bus
   - all other images inherit the above changes
-- Updated version:
-  - Chromium Browser **80.0.3987.87**
-  - Firefox **73.0**
 - **README** updated (better explanation of default passwords)
 - container screenshots updated
+- Updated versions:
+  - Chromium Browser **80.0.3987.87**
+  - Firefox **73.0**
 
 ### Release 20.02
 
