@@ -6,6 +6,11 @@
 
 ***
 
+### Release 20.02.3
+
+- Updated versions:
+  - Firefox **73.0.1**
+
 ### Release 20.02.2
 
 - **Ubuntu** base image updated to version **18.04.4**
