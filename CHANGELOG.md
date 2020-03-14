@@ -6,6 +6,11 @@
 
 ***
 
+### Release 20.03
+
+- Updated versions:
+  - Firefox **74.0**
+
 ### Release 20.02.3
 
 - Updated versions:
