@@ -6,6 +6,11 @@
 
 ***
 
+### Release 20.03.1
+
+- **xubuntu-vnc-novnc**
+  - **Ubuntu** base image updated (inherited by all derived images)
+
 ### Release 20.03
 
 - Updated versions:
@@ -23,7 +28,7 @@
 ### Release 20.02.1
 
 - **xubuntu-vnc-novnc**
-  - **gdebi** utility for installing local `.deb` packages added 
+  - **gdebi** utility for installing local `.deb` packages added
   - auto-starting again:
     - AT-SPI D-Bus Bus
   - desktop launcher for version sticker script (verbose) added
