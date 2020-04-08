@@ -6,6 +6,12 @@
 
 ***
 
+### Release 20.04.2
+
+- Updated versions:
+  - Firefox **75.0**
+  - Chromium Browser **80.0.3987.163**
+
 ### Release 20.04.1
 
 - Updated versions:
