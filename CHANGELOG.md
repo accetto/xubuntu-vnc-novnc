@@ -6,6 +6,11 @@
 
 ***
 
+### Release 20.04.3
+
+- **xubuntu-vnc-novnc**
+  - **tini** updated to version **0.19.0** (inherited by all derived images)
+
 ### Release 20.04.2
 
 - Updated versions:

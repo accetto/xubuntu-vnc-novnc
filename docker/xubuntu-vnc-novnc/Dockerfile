@@ -128,7 +128,7 @@ RUN echo \
 
 FROM stage-novnc as stage-tini
 
-ADD https://github.com/krallin/tini/releases/download/v0.18.0/tini /tini
+ADD https://github.com/krallin/tini/releases/download/v0.19.0/tini /tini
 RUN chmod +x /tini
 
 FROM stage-tini as stage-final
