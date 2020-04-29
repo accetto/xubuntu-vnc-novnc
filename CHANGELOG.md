@@ -6,6 +6,15 @@
 
 ***
 
+### Release 20.04.4
+
+- **xubuntu-vnc-novnc**
+  - using base image tag **ubuntu:18.04** explicitly
+    - **env** hook script updated accordingly
+    - note that the tag **latest** now means **based on ubuntu:18.04**
+  - **websockify** updated to version **0.9.0**
+  - all above changes inherited by all derived images
+
 ### Release 20.04.3
 
 - **xubuntu-vnc-novnc**
