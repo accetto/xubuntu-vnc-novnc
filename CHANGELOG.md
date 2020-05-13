@@ -6,6 +6,12 @@
 
 ***
 
+### Release 20.05
+
+- Updated versions:
+  - Chromium Browser **81.0.4044.138**
+  - Firefox **76.0.1**
+
 ### Release 20.04.4
 
 - **xubuntu-vnc-novnc**

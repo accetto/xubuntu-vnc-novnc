@@ -15,12 +15,6 @@
 
 ***
 
-**WARNING** for Windows users
-
-**Docker Desktop** (Docker for Windows) version **2.2.0.0** has introduced a new way of working with host's files. Unfortunately even the current version **2.2.0.3** leaves several issues with **bind mounts** unresolved. For example, I've found that **Firefox profiles** stored in bound host's folders don't persist modifications correctly. Firefox profiles stored in containers itself (writable layer) or on Docker managed volumes work correctly. If you need to use bind mounts, I wouldn't recommend upgrading to version 2.2 yet, because downgrading is not possible. The only way is to completely re-install the last working version **2.1.0.5**. However, you'll loose all the images and containers, so backup them first.
-
-***
-
 This repository contains resources for building Docker images based on [Ubuntu][docker-ubuntu] with [Xfce][xfce] desktop environment and [VNC][tigervnc]/[noVNC][novnc] servers for headless use.
 
 The main image is a streamlined and simplified version of my other image [accetto/ubuntu-vnc-xfce][accetto-docker-ubuntu-vnc-xfce] and it is part of the growing [image hierarchy][this-wiki-image-hierarchy].
