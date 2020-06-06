@@ -11,7 +11,7 @@ BASETAG=""
 TODAY=$(date +%Y-%m-%d)
 
 ### Warning! The values must be explicit strings (used by utils).
-VERSION_STICKER_LATEST="ubuntu18.04.4-chromium81.0.4044.138"
+VERSION_STICKER_LATEST="ubuntu18.04.4-chromium83.0.4103.61"
 
 VERSION_STICKER="${VERSION_STICKER_LATEST}"
 

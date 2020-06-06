@@ -132,7 +132,7 @@ echo "Connect via noVNC with http://${VNC_IP}:${NO_VNC_PORT}"
 if [[ ${DEBUG} == true ]] || [[ $1 =~ -t|--tail-log ]]; then
     echo "Display log: ${HOME}/.vnc/*${DISPLAY}.log"
     ### if option `-t` or `--tail-log` block the execution and tail the VNC log
-    tail -f "${STARTUPDIR}/*.log" "${HOME}/.vnc/*${DISPLAY}.log"
+    tail -f "${STARTUPDIR}"/*.log "${HOME}"/.vnc/*"${DISPLAY}".log
 fi
 
 if [ -z "$1" ] || [[ $1 =~ -w|--wait ]]; then

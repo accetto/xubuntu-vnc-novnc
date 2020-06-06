@@ -6,6 +6,15 @@
 
 ***
 
+### Release 20.06
+
+- **xubuntu-vnc-novnc**
+  - [Issue #1](https://github.com/accetto/xubuntu-vnc-novnc/issues/1) fixed by fixing **vnc_startup.sh**
+    - fixes also startup-up options **--debug** and **--tail-log**
+- Updated versions:
+  - Chromium Browser **83.0.4103.61**
+  - Firefox **77.0.1**
+
 ### Release 20.05
 
 - Updated versions:
