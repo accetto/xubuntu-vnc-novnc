@@ -1,6 +1,15 @@
-# ./hooks/build dev-default
-# ./hooks/build dfw-default
 # ./hooks/build nux-default
+# ./hooks/build dfw-default
+# ./hooks/build dev-default
+
+### Build it locally like, for example:
+### ./utils/util-hdx.sh Dockerfile.firefox.default 1
+### Test it locally like, for example:
+### ./hooks/test nux-default
+### Result last line should be:
+### + exit 0
+### If 'exit 1' then adjust the version sticker variables in
+### ./hooks/env
 
 ARG BASETAG=latest
 
@@ -12,22 +21,22 @@ ARG ARG_MOZ_FORCE_DISABLE_E10S
 USER 0
 
 ### 'apt-get clean' runs automatically
-# RUN apt-get update && apt-get install -y \
-#         firefox \
-#     && apt-get -y autoremove \
-#     && rm -rf /var/lib/apt/lists/*
+RUN apt-get update && apt-get install -y \
+        firefox \
+    && apt-get -y autoremove \
+    && rm -rf /var/lib/apt/lists/*
 
 ### Mitigating issue #2 (Firefox 77.0.1 scrambles pages) - rollback to version 76.0.1
 ### Alternatively install an explicit Firefox version
 ### http://releases.mozilla.org/pub/firefox/releases/67.0.4/linux-x86_64/en-US/firefox-67.0.4.tar.bz2
-ENV \
-    FIREFOX_VERSION=76.0.1 \
-    FIREFOX_DISTRO=linux-x86_64 \
-    FIREFOX_PATH=/usr/lib/firefox
-RUN mkdir -p ${FIREFOX_PATH} \
-    && wget -qO- http://releases.mozilla.org/pub/firefox/releases/${FIREFOX_VERSION}/${FIREFOX_DISTRO}/en-US/firefox-${FIREFOX_VERSION}.tar.bz2 \
-        | tar xvj -C /usr/lib/ \
-    && ln -s ${FIREFOX_PATH}/firefox /usr/bin/firefox
+# ENV \
+#     FIREFOX_VERSION=76.0.1 \
+#     FIREFOX_DISTRO=linux-x86_64 \
+#     FIREFOX_PATH=/usr/lib/firefox
+# RUN mkdir -p ${FIREFOX_PATH} \
+#     && wget -qO- http://releases.mozilla.org/pub/firefox/releases/${FIREFOX_VERSION}/${FIREFOX_DISTRO}/en-US/firefox-${FIREFOX_VERSION}.tar.bz2 \
+#         | tar xvj -C /usr/lib/ \
+#     && ln -s ${FIREFOX_PATH}/firefox /usr/bin/firefox
 
 ### Preconfigure Xfce
 COPY [ "./src/firefox/home/Desktop", "${HOME}/Desktop/" ]

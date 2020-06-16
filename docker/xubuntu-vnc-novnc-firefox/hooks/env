@@ -11,9 +11,9 @@ TODAY=$(date +%Y-%m-%d)
 VERSION_STICKER=""
 
 ### Warning! The values must be explicit strings (used by utils).
-VERSION_STICKER_LATEST="ubuntu18.04.4-firefox76.0.1"
-VERSION_STICKER_DEFAULT="ubuntu18.04.4-firefox76.0.1"
-VERSION_STICKER_MULTIPROCESS="ubuntu18.04.4-firefox76.0.1"
+VERSION_STICKER_LATEST="ubuntu18.04.4-firefox77.0.1"
+VERSION_STICKER_DEFAULT="ubuntu18.04.4-firefox77.0.1"
+VERSION_STICKER_SINGLEPROCESS="ubuntu18.04.4-firefox77.0.1"
 
 case "${DOCKER_TAG}" in
 
@@ -27,8 +27,8 @@ case "${DOCKER_TAG}" in
         DOCKERFILE_PATH=${DOCKERFILE_PATH:-./Dockerfile.firefox.default}
         ;;
 
-    multiprocess | dev-multiprocess | dfw-multiprocess | nux-multiprocess)
-        VERSION_STICKER="${VERSION_STICKER_MULTIPROCESS}"
+    singleprocess | dev-singleprocess | dfw-singleprocess | nux-singleprocess)
+        VERSION_STICKER="${VERSION_STICKER_SINGLEPROCESS}"
         DOCKERFILE_PATH=${DOCKERFILE_PATH:-./Dockerfile.firefox}
         ;;
 esac
@@ -37,38 +37,38 @@ case "${DOCKER_TAG}" in
 
     latest | default)
         BASETAG="latest"
-        IS_SINGLEPROCESS_BUILD=yes
         ;;
 
-    multiprocess)
+    singleprocess)
         BASETAG="latest"
+        IS_SINGLEPROCESS_BUILD=yes
         ;;
 
     dev | dev-default)
         BASETAG="dev"
-        IS_SINGLEPROCESS_BUILD=yes
         ;;
 
-    dev-multiprocess)
+    dev-singleprocess)
         BASETAG="dev"
+        IS_SINGLEPROCESS_BUILD=yes
         ;;
 
     dfw | dfw-default)
         BASETAG="dfw"
-        IS_SINGLEPROCESS_BUILD=yes
         ;;
 
-    dfw-multiprocess)
+    dfw-singleprocess)
         BASETAG="dfw"
+        IS_SINGLEPROCESS_BUILD=yes
         ;;
 
     nux | nux-default)
         BASETAG="nux"
-        IS_SINGLEPROCESS_BUILD=yes
         ;;
 
-    nux-multiprocess)
+    nux-singleprocess)
         BASETAG="nux"
+        IS_SINGLEPROCESS_BUILD=yes
         ;;
 
     *)

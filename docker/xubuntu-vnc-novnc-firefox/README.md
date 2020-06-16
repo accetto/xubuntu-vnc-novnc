@@ -53,7 +53,7 @@ The following image tags are regularly maintained and rebuilt:
     ![badge-VERSION_STICKER_DEFAULT][badge-VERSION_STICKER_DEFAULT]
     ![badge-github-commit-default][badge-github-commit-default]
 
-- `multiprocess` is also similar to `latest`, but it is not built with the build argument **ARG_MOZ_FORCE_DISABLE_E10S**, so the Firefox multiprocess is **enabled**
+- //TODO: `multiprocess` is also similar to `latest`, but it is not built with the build argument **ARG_MOZ_FORCE_DISABLE_E10S**, so the Firefox multiprocess is **enabled**
 
     ![badge-VERSION_STICKER_MULTIPROCESS][badge-VERSION_STICKER_MULTIPROCESS]
     ![badge-github-commit-multiprocess][badge-github-commit-multiprocess]
@@ -117,7 +117,7 @@ There are two ways, how to use the created headless containers. Please refer to 
 
 Note that the default **VNC user** password is **headless**.
 
-## Firefox multi-process
+## TODO: Firefox multi-process
 
 Firefox multi-process (also known as **Electrolysis** or just **E10S**) causes in Docker container heavy crashing (**Gah. Your tab just crashed.**) and therefore it needs to be disabled.
 
@@ -244,13 +244,13 @@ Credit goes to all the countless people and companies, who contribute to open so
 
 <!-- latest tag badges -->
 
-[badge-VERSION_STICKER_LATEST]: https://badgen.net/badge/version%20sticker/ubuntu18.04.4-firefox76.0.1/blue
+[badge-VERSION_STICKER_LATEST]: https://badgen.net/badge/version%20sticker/ubuntu18.04.4-firefox77.0.1/blue
 
 [badge-github-commit-latest]: https://images.microbadger.com/badges/commit/accetto/xubuntu-vnc-novnc-firefox.svg
 
 <!-- default tag badges -->
 
-[badge-VERSION_STICKER_DEFAULT]: https://badgen.net/badge/version%20sticker/ubuntu18.04.4-firefox76.0.1/blue
+[badge-VERSION_STICKER_DEFAULT]: https://badgen.net/badge/version%20sticker/ubuntu18.04.4-firefox77.0.1/blue
 
 [badge-github-commit-default]: https://images.microbadger.com/badges/commit/accetto/xubuntu-vnc-novnc-firefox:default.svg
 

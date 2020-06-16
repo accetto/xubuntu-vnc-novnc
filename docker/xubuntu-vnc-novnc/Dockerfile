@@ -1,10 +1,21 @@
-# ./hooks/build dev
-# ./hooks/build dfw
 # ./hooks/build nux
 # ./hooks/build nux --no-cache
+# ./hooks/build dfw
+# ./hooks/build dfw --no-cache
+# ./hooks/build dev
+# ./hooks/build dev --no-cache
 # ./hooks/build dev-lab
 # ./hooks/build dfw-lab
 # ./hooks/build nux-lab
+
+### Build it locally like, for example:
+### ./utils/util-hdx.sh Dockerfile 2
+### Test it locally like, for example:
+### ./hooks/test nux
+### Result last line should be:
+### + exit 0
+### If 'exit 1' then adjust the version sticker variables in
+### ./hooks/env
 
 ARG BASETAG=18.04
 
