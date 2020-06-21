@@ -15,6 +15,12 @@
 
 ***
 
+**WARNING** about images with Firefox
+
+Starting from the release **20.06.2**, the single-process and multi-process modes of the Firefox browser have been swapped. The mainstream images tagged as `latest` and `default` run Firefox with **multi-process enabled** now. The previous image tagged as `multiprocess` has been replaced by the `singleprocess` one. Be aware, that multi-process requires larger shared memory (`/dev/shm`). At least **256MB** is recommended. Please check the README file of the Firefox image and the [Firefox multi-process][that-wiki-firefox-multiprocess] page in Wiki for more information and the instructions, how to set the shared memory size in different scenarios.
+
+***
+
 This repository contains resources for building Docker images based on [Ubuntu][docker-ubuntu] with [Xfce][xfce] desktop environment, [VNC][tigervnc]/[noVNC][novnc] servers for headless use and the current [Firefox Quantum][firefox] web browser.
 
 The main image is a streamlined and simplified version of my other image [accetto/ubuntu-vnc-xfce-firefox-plus][accetto-docker-ubuntu-vnc-xfce-firefox-plus]. The applicable **plus** features have been re-implemented because **Firefox v67** handles user profiles differently.
@@ -53,10 +59,10 @@ The following image tags are regularly maintained and rebuilt:
     ![badge-VERSION_STICKER_DEFAULT][badge-VERSION_STICKER_DEFAULT]
     ![badge-github-commit-default][badge-github-commit-default]
 
-- //TODO: `multiprocess` is also similar to `latest`, but it is not built with the build argument **ARG_MOZ_FORCE_DISABLE_E10S**, so the Firefox multiprocess is **enabled**
+- `singleprocess` is also similar to `latest`, but it is built with the build argument **ARG_MOZ_FORCE_DISABLE_E10S**, so the Firefox multiprocess is **disabled**
 
-    ![badge-VERSION_STICKER_MULTIPROCESS][badge-VERSION_STICKER_MULTIPROCESS]
-    ![badge-github-commit-multiprocess][badge-github-commit-multiprocess]
+    ![badge-VERSION_STICKER_SINGLEPROCESS][badge-VERSION_STICKER_SINGLEPROCESS]
+    ![badge-github-commit-singleprocess][badge-github-commit-singleprocess]
 
 ### Dockerfiles
 
@@ -117,38 +123,39 @@ There are two ways, how to use the created headless containers. Please refer to 
 
 Note that the default **VNC user** password is **headless**.
 
-## TODO: Firefox multi-process
+## Firefox multi-process
 
-Firefox multi-process (also known as **Electrolysis** or just **E10S**) causes in Docker container heavy crashing (**Gah. Your tab just crashed.**) and therefore it needs to be disabled.
+Firefox multi-process (also known as **Electrolysis** or just **E10S**) can cause heavy crashing in Docker containers (**Gah. Your tab just crashed.**) if there is not enough shared memory.
 
-In Firefox versions till **67.0.4** it could be done by setting the preferences **browser.tabs.remote.autostart** and **browser.tabs.remote.autostart.2** to **false**. However, Mozilla has removed this possibility since the Firefox version **68.0**.
+In Firefox versions till **76.0.1** it has been possible to disable multi-process by setting the environment variable **MOZ_FORCE_DISABLE_E10S**. However, in Firefox **77.0.1** it has caused ugly scrambling of almost all web pages, because they were not decompressed.
 
-Since than it can be done only by setting the following environment variable:
+Mozilla has fixed the problem in the next release, but they still plan to stop supporting the switch completely. That is why I've decided, that the mainstream images tagged as `latest` and `default` will use multi-process by default, even if it requires larger shared memory. On the positive side, performance should be higher and Internet browsing should be sand-boxed.
+
+The previous image tagged as `multiprocess` has been replaced by the `singleprocess` one, which can be used in scenarios, where increasing the shared more size is not possible or not wanted.
+
+Please check the Wiki page [Firefox multi-process][that-wiki-firefox-multiprocess] for more information and the instructions, how the shared memory size can be set in different scenarios.
+
+### Setting shared memory size
+
+Instability of multi-process Firefox is caused by setting the shared memory size too low. Docker assigns only **64MB** by default. Testing on my computers has shown, that using at least **256MB** completely eliminates the problem. However, it could be different on your system.
+
+The Wiki page [Firefox multi-process][that-wiki-firefox-multiprocess] describes several ways, how to increase the shared memory size. It's really simple, if you need it for a single container started from the command line.
+
+For example, the following container will have its shared memory size set to 256MB:
 
 ```bash
-MOZ_FORCE_DISABLE_E10S
+docker run -d -P --shm-size=256m accetto/xubuntu-vnc-novnc-firefox
 ```
 
-Therefore the images tagged `latest` and `default` set this variable to **1** by using the build argument **ARG_MOZ_FORCE_DISABLE_E10S**.
-
-Note that any value will actually disable the multi-process feature, so the both following settings would have the same effect:
+You can check the current shared memory size by executing the following command inside the container:
 
 ```bash
-MOZ_FORCE_DISABLE_E10S=1
-MOZ_FORCE_DISABLE_E10S=0
-```
-
-Building an image without the build argument **ARG_MOZ_FORCE_DISABLE_E10S** enables the Firefox multi-process feature. The image tagged `multiprocess` is built that way.
-
-To check whether the Firefox multi-process is enabled or disabled, navigate the web browser to the following URL:
-
-```bash
-about:support
+df -h /dev/shm
 ```
 
 ## Firefox preferences and the plus features
 
-**Firefox** browser supports pre-configuration of user preferences.
+Firefox browser supports pre-configuration of user preferences.
 
 Users can enforce their personal browser preferences if they put them into the `user.js` file and then copy it into the Firefox profile folder. The provided **plus** features make it really easy.
 
@@ -195,6 +202,8 @@ Credit goes to all the countless people and companies, who contribute to open so
 
 [this-wiki]: https://github.com/accetto/xubuntu-vnc-novnc/wiki
 [this-wiki-image-hierarchy]: https://github.com/accetto/xubuntu-vnc-novnc/wiki/Image-hierarchy
+
+[that-wiki-firefox-multiprocess]: https://github.com/accetto/xubuntu-vnc/wiki/Firefox-multiprocess
 
 [this-issues]: https://github.com/accetto/xubuntu-vnc-novnc/issues
 
@@ -254,8 +263,8 @@ Credit goes to all the countless people and companies, who contribute to open so
 
 [badge-github-commit-default]: https://images.microbadger.com/badges/commit/accetto/xubuntu-vnc-novnc-firefox:default.svg
 
-<!-- multiprocess tag badges -->
+<!-- singleprocess tag badges -->
 
-[badge-VERSION_STICKER_MULTIPROCESS]: https://badgen.net/badge/version%20sticker/ubuntu18.04.4-firefox76.0.1/blue
+[badge-VERSION_STICKER_SINGLEPROCESS]: https://badgen.net/badge/version%20sticker/ubuntu18.04.4-firefox77.0.1/blue
 
-[badge-github-commit-multiprocess]: https://images.microbadger.com/badges/commit/accetto/xubuntu-vnc-novnc-firefox:multiprocess.svg
+[badge-github-commit-singleprocess]: https://images.microbadger.com/badges/commit/accetto/xubuntu-vnc-novnc-firefox:singleprocess.svg
