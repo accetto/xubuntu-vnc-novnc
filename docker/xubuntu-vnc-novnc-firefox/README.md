@@ -59,7 +59,7 @@ The following image tags are regularly maintained and rebuilt:
     ![badge-VERSION_STICKER_DEFAULT][badge-VERSION_STICKER_DEFAULT]
     ![badge-github-commit-default][badge-github-commit-default]
 
-- `singleprocess` is also similar to `latest`, but it is built with the build argument **ARG_MOZ_FORCE_DISABLE_E10S**, so the Firefox multiprocess is **disabled**
+- `singleprocess` is also similar to `latest`, but it is built without the build argument **ARG_MOZ_FORCE_DISABLE_E10S**, so the Firefox multiprocess is **disabled**
 
     ![badge-VERSION_STICKER_SINGLEPROCESS][badge-VERSION_STICKER_SINGLEPROCESS]
     ![badge-github-commit-singleprocess][badge-github-commit-singleprocess]
@@ -131,7 +131,7 @@ In Firefox versions till **76.0.1** it has been possible to disable multi-proces
 
 Mozilla has fixed the problem in the next release, but they still plan to stop supporting the switch completely. That is why I've decided, that the mainstream images tagged as `latest` and `default` will use multi-process by default, even if it requires larger shared memory. On the positive side, performance should be higher and Internet browsing should be sand-boxed.
 
-The previous image tagged as `multiprocess` has been replaced by the `singleprocess` one, which can be used in scenarios, where increasing the shared more size is not possible or not wanted.
+The previous image tagged as `multiprocess` has been replaced by the `singleprocess` one, which can be used in scenarios, where increasing the shared memory size is not possible or not wanted.
 
 Please check the Wiki page [Firefox multi-process][that-wiki-firefox-multiprocess] for more information and the instructions, how the shared memory size can be set in different scenarios.
 
