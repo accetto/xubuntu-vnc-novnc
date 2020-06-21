@@ -8,23 +8,27 @@
 
 ### Release 20.06.2
 
+- **xubuntu-vnc-novnc**
+  - `version_of.sh` updated (Firefox version pattern)
+    - this will be inherited by all derived images
 - **xubuntu-vnc-novnc-firefox**
-  - **IMPORTANT**: multi-threaded mode is default now, but larger shared memory is required (see bellow)
-    - environment variable MOZ_FORCE_DISABLE_E10S=1 is not default any more
+  - **IMPORTANT**: Firefox multi-process mode is default now and therefore larger shared memory (`/dev/shm`) is required (see bellow)
+    - environment variable **MOZ_FORCE_DISABLE_E10S** is not set by default any more
     - **containers with Firefox require more shared memory** (/dev/shm) to run reliably
-      - at least 256MB is recommended (default is 64MB)
+      - at least **256MB** is recommended (default is just 64MB)
       - use `docker run --shm-size=256m`
-        - or `shm_size: 256m` at service level in docker-compose
-    - this could be **possibly a breaking change**!
-    - FIXED: [Issue #2 (Firefox 77.0.1 scrambles pages)](https://github.com/accetto/xubuntu-vnc-novnc/issues/2)
-    - Internet browsing should be sand-boxed now
-    - tag `multiprocess` is replaced by `singleprocess`
+        - or `shm_size: 256m` at service level in docker-compose files
+        - see [Firefox multi-process][that-wiki-firefox-multiprocess] in Wiki for description and instructions
+    - this fixes the [issue #2 (Firefox 77.0.1 scrambles pages)](https://github.com/accetto/xubuntu-vnc-novnc/issues/2)
+    - Internet browsing should be **sand-boxed** now
+    - tag `multiprocess` is replaced by `singleprocess` one
       - which is single-threaded, but
-      - please be aware that in **this** release (Firefox 77.0.1) webpages will be still scrambled (issue #2)
-  - all above changes are inherited by all derived images using Firefox
+      - please be aware that in **this** release (still Firefox **77.0.1**) webpages will be still scrambled (issue #2)
+      - it should be fixed by Mozilla in the next Firefox release
+  - all above changes are inherited by all derived images that include Firefox
 - Other changes:
   - added some help comments into Dockerfiles
-  - //TODO: README files have been updated
+  - README files have been updated
 - Updated versions:
   - Firefox **77.0.1**
 
@@ -253,3 +257,5 @@
 [this-github]: https://github.com/accetto/xubuntu-vnc-novnc/
 [this-wiki]: https://github.com/accetto/xubuntu-vnc-novnc/wiki
 [this-wiki-image-hierarchy]: https://github.com/accetto/xubuntu-vnc-novnc/wiki/Image-hierarchy
+
+[that-wiki-firefox-multiprocess]: https://github.com/accetto/xubuntu-vnc/wiki/Firefox-multiprocess
