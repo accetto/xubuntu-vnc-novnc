@@ -8,6 +8,8 @@
 
 ### Release 20.07
 
+- **xubuntu-vnc-novnc-firefox**
+  - fix in `push` hook script
 - Updated versions:
   - Firefox **78.0.1**
 
