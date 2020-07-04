@@ -6,6 +6,11 @@
 
 ***
 
+### Release 20.07
+
+- Updated versions:
+  - Firefox **78.0.1**
+
 ### Release 20.06.2
 
 - **xubuntu-vnc-novnc**

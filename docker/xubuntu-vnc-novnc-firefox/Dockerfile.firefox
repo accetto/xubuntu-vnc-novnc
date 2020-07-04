@@ -4,9 +4,9 @@
 # ./hooks/build dfw --no-cache
 # ./hooks/build dev
 # ./hooks/build dev --no-cache
-# ./hooks/build dev-singleprocess
-# ./hooks/build dfw-singleprocess
 # ./hooks/build nux-singleprocess
+# ./hooks/build dfw-singleprocess
+# ./hooks/build dev-singleprocess
 
 ### Build it locally like, for example:
 ### ./utils/util-hdx.sh Dockerfile.firefox 2
