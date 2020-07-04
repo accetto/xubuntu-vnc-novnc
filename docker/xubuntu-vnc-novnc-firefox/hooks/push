@@ -15,9 +15,9 @@ if [[ -n "${BASETAG}" ]] ; then
             docker tag ${IMAGE_NAME} ${DOCKER_REPO}:default-${VERSION_STICKER}
             docker push ${DOCKER_REPO}:default-${VERSION_STICKER}
             ;;
-        multiprocess)
-            docker tag ${IMAGE_NAME} ${DOCKER_REPO}:multiprocess-${VERSION_STICKER}
-            docker push ${DOCKER_REPO}:multiprocess-${VERSION_STICKER}
+        singleprocess)
+            docker tag ${IMAGE_NAME} ${DOCKER_REPO}:singleprocess-${VERSION_STICKER}
+            docker push ${DOCKER_REPO}:singleprocess-${VERSION_STICKER}
             ;;
     esac
 else
