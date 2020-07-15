@@ -10,8 +10,8 @@
 
 - **xubuntu-vnc-novnc**
   - base **ubuntu:18.04** image has been updated
-  - **noVNC** 1.2.0
-  - **version_of** updated (because of **noVNC**)
+  - **noVNC** version **1.2.0**
+  - **version_of.sh** updated (because of **noVNC**)
   - all above changes inherited by all derived images
 - Updated versions:
   - Firefox **78.0.2**
