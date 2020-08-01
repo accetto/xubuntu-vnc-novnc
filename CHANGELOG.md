@@ -6,6 +6,14 @@
 
 ***
 
+### Release 20.08
+
+- **xubuntu-vnc-novnc**
+  - base **ubuntu:18.04** image has been updated
+    - derived images inherit this change
+- Updated versions:
+  - Firefox **79.0**
+
 ### Release 20.07.1
 
 - **xubuntu-vnc-novnc**
