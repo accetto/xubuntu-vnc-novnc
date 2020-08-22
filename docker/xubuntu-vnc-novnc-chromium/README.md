@@ -159,6 +159,6 @@ Credit goes to all the countless people and companies, who contribute to open so
 
 <!-- latest tag badges -->
 
-[badge-VERSION_STICKER_LATEST]: https://badgen.net/badge/version%20sticker/ubuntu18.04.4-chromium83.0.4103.61/blue
+[badge-VERSION_STICKER_LATEST]: https://badgen.net/badge/version%20sticker/ubuntu18.04.5-chromium84.0.4147.105/blue
 
 [badge-github-commit-latest]: https://images.microbadger.com/badges/commit/accetto/xubuntu-vnc-novnc-chromium.svg

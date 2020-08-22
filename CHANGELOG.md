@@ -6,6 +6,14 @@
 
 ***
 
+### Release 20.08.1
+
+- **xubuntu-vnc-novnc**
+  - base image **ubuntu:18.04** has been updated to version **18.04.5**
+    - derived images inherit this change
+- Updated versions:
+  - Chromium Browser **84.0.4147.105**
+
 ### Release 20.08
 
 - **xubuntu-vnc-novnc**

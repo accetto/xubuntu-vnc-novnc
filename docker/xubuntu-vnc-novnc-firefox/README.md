@@ -253,18 +253,18 @@ Credit goes to all the countless people and companies, who contribute to open so
 
 <!-- latest tag badges -->
 
-[badge-VERSION_STICKER_LATEST]: https://badgen.net/badge/version%20sticker/ubuntu18.04.4-firefox79.0/blue
+[badge-VERSION_STICKER_LATEST]: https://badgen.net/badge/version%20sticker/ubuntu18.04.5-firefox79.0/blue
 
 [badge-github-commit-latest]: https://images.microbadger.com/badges/commit/accetto/xubuntu-vnc-novnc-firefox.svg
 
 <!-- default tag badges -->
 
-[badge-VERSION_STICKER_DEFAULT]: https://badgen.net/badge/version%20sticker/ubuntu18.04.4-firefox79.0/blue
+[badge-VERSION_STICKER_DEFAULT]: https://badgen.net/badge/version%20sticker/ubuntu18.04.5-firefox79.0/blue
 
 [badge-github-commit-default]: https://images.microbadger.com/badges/commit/accetto/xubuntu-vnc-novnc-firefox:default.svg
 
 <!-- singleprocess tag badges -->
 
-[badge-VERSION_STICKER_SINGLEPROCESS]: https://badgen.net/badge/version%20sticker/ubuntu18.04.4-firefox79.0/blue
+[badge-VERSION_STICKER_SINGLEPROCESS]: https://badgen.net/badge/version%20sticker/ubuntu18.04.5-firefox79.0/blue
 
 [badge-github-commit-singleprocess]: https://images.microbadger.com/badges/commit/accetto/xubuntu-vnc-novnc-firefox:singleprocess.svg
