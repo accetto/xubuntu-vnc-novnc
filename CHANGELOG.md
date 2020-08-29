@@ -6,6 +6,10 @@
 
 ***
 
+### Release 20.08.2
+
+- Firefox **80.0**
+
 ### Release 20.08.1
 
 - **xubuntu-vnc-novnc**
