@@ -44,6 +44,7 @@ RUN apt-get update && apt-get install -y \
         gdebi-core \
         git \
         wget \
+        nano \
     && apt-get -y autoremove \
     && rm -rf /var/lib/apt/lists/*
 

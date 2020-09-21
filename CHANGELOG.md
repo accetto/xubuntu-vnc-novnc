@@ -6,6 +6,12 @@
 
 ***
 
+### Release 20.09.1
+
+- **nano** editor added
+Updated versions:
+  - Chromium Browser **85.0.4183.83**
+
 ### Release 20.09
 
 - Firefox **80.0.1**
