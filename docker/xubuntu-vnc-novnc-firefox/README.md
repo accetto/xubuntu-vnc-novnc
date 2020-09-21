@@ -32,7 +32,7 @@ The `latest` image inherits among others
 - utilities **ping**, **wget**, **zip**, **unzip**, **sudo**, [curl][curl], [git][git] (Ubuntu distribution)
 - utility **gdebi** lets  you install local `.deb` packages resolving and installing their dependencies (Ubuntu distribution)
 - current version of JSON processor [jq][jq]
-- popular text editor [vim][vim] (Ubuntu distribution)
+- popular text editors [vim][vim] and [nano][nano] (Ubuntu distribution)
 - lite but advanced graphical editor [mousepad][mousepad] (Ubuntu distribution)
 - [xfce4-screenshooter][screenshooter] and image viewer [ristretto][ristretto] (Ubuntu distribution)
 - current version of [tini][tini] as the entry-point initial process (PID 1)
@@ -230,6 +230,7 @@ Credit goes to all the countless people and companies, who contribute to open so
 [git]: https://git-scm.com/
 [jq]: https://stedolan.github.io/jq/
 [mousepad]: https://github.com/codebrainz/mousepad
+[nano]: https://www.nano-editor.org/
 [novnc]: https://github.com/kanaka/noVNC
 [ristretto]: https://docs.xfce.org/apps/ristretto/start
 [screenshooter]: https://docs.xfce.org/apps/screenshooter/start
