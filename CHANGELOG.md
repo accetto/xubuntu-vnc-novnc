@@ -9,7 +9,7 @@
 ### Release 20.09.1
 
 - **nano** editor added
-Updated versions:
+- Updated versions:
   - Chromium Browser **85.0.4183.83**
 
 ### Release 20.09
