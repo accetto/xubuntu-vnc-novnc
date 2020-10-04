@@ -6,6 +6,16 @@
 
 ***
 
+### Release 20.10
+
+- updated scripts (all images):
+  - version_of.sh
+  - version_sticker.sh
+  - util-hdx.sh
+- Updated versions:
+  - Chromium Browser **85.0.4183.121**
+  - Firefox **81.0**
+
 ### Release 20.09.1
 
 - **nano** editor added

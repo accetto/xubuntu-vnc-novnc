@@ -12,6 +12,7 @@ case "$1" in
         screenshooter=$("${STARTUPDIR}/version_of.sh" screenshooter)
         ristretto=$("${STARTUPDIR}/version_of.sh" ristretto)
         vim=$("${STARTUPDIR}/version_of.sh" vim)
+        nano=$("${STARTUPDIR}/version_of.sh" nano)
         tigervnc=$("${STARTUPDIR}/version_of.sh" tigervnc)
         novnc=$("${STARTUPDIR}/version_of.sh" novnc)
         websockify=$("${STARTUPDIR}/version_of.sh" websockify)
@@ -21,6 +22,7 @@ case "$1" in
         jq=$("${STARTUPDIR}/version_of.sh" jq)
         echo "Ubuntu $ubuntu"
         echo "VIM $vim"
+        echo "GNU nano $nano"
         echo "TigerVNC $tigervnc"
         echo "noVNC $novnc"
         echo "websockify $websockify"

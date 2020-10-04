@@ -3,9 +3,11 @@
 # ./hooks/build dev-default
 
 ### Build it locally like, for example:
-### ./utils/util-hdx.sh Dockerfile.firefox.default 1
+### ./utils/util-hdx.sh Dockerfile.firefox.default 2
+### or for example
+### ./utils/util-hdx.sh Dockerfile.firefox.default 2 --no-cache
 ### Test it locally like, for example:
-### ./hooks/test nux-default
+### ./hooks/test dfw-default
 ### Result last line should be:
 ### + exit 0
 ### If 'exit 1' then adjust the version sticker variables in
