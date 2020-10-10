@@ -13,23 +13,17 @@ VERSION_STICKER=""
 ### Warning! The values must be explicit strings (used by utils).
 VERSION_STICKER_LATEST="ubuntu18.04.5-firefox81.0"
 VERSION_STICKER_DEFAULT="ubuntu18.04.5-firefox81.0"
-VERSION_STICKER_SINGLEPROCESS="ubuntu18.04.5-firefox81.0"
 
 case "${DOCKER_TAG}" in
 
-    latest | dev | dfw | nux)
+    latest | dev )
         VERSION_STICKER="${VERSION_STICKER_LATEST}"
         DOCKERFILE_PATH=${DOCKERFILE_PATH:-./Dockerfile.firefox}
         ;;
 
-    default | dev-default | dfw-default | nux-default)
+    default | dev-default )
         VERSION_STICKER="${VERSION_STICKER_DEFAULT}"
         DOCKERFILE_PATH=${DOCKERFILE_PATH:-./Dockerfile.firefox.default}
-        ;;
-
-    singleprocess | dev-singleprocess | dfw-singleprocess | nux-singleprocess)
-        VERSION_STICKER="${VERSION_STICKER_SINGLEPROCESS}"
-        DOCKERFILE_PATH=${DOCKERFILE_PATH:-./Dockerfile.firefox}
         ;;
 esac
 
@@ -39,36 +33,8 @@ case "${DOCKER_TAG}" in
         BASETAG="latest"
         ;;
 
-    singleprocess)
-        BASETAG="latest"
-        IS_SINGLEPROCESS_BUILD=yes
-        ;;
-
     dev | dev-default)
         BASETAG="dev"
-        ;;
-
-    dev-singleprocess)
-        BASETAG="dev"
-        IS_SINGLEPROCESS_BUILD=yes
-        ;;
-
-    dfw | dfw-default)
-        BASETAG="dfw"
-        ;;
-
-    dfw-singleprocess)
-        BASETAG="dfw"
-        IS_SINGLEPROCESS_BUILD=yes
-        ;;
-
-    nux | nux-default)
-        BASETAG="nux"
-        ;;
-
-    nux-singleprocess)
-        BASETAG="nux"
-        IS_SINGLEPROCESS_BUILD=yes
         ;;
 
     *)

@@ -18,13 +18,13 @@ VERSION_STICKER="${VERSION_STICKER_LATEST}"
 
 case "${DOCKER_TAG}" in
 
-    latest | dev | dfw | nux)
+    latest | dev )
         BASETAG="18.04"
         VERSION_STICKER="${VERSION_STICKER_LATEST}"
         SUPPORT_USER_GROUP_OVERRIDE=
         ;;
 
-    lab | dev-lab | dfw-lab | nux-lab)
+    lab | dev-lab )
         BASETAG="18.04"
         VERSION_STICKER="${VERSION_STICKER_LAB}"
         SUPPORT_USER_GROUP_OVERRIDE="yes"

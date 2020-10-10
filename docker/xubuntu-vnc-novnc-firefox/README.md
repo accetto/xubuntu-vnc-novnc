@@ -17,7 +17,7 @@
 
 **WARNING** about images with Firefox
 
-Starting from the release **20.06.2**, the single-process and multi-process modes of the Firefox browser have been swapped. The mainstream images tagged as `latest` and `default` run Firefox with **multi-process enabled** now. The previous image tagged as `multiprocess` has been replaced by the `singleprocess` one. Be aware, that multi-process requires larger shared memory (`/dev/shm`). At least **256MB** is recommended. Please check the README file of the Firefox image and the [Firefox multi-process][that-wiki-firefox-multiprocess] page in Wiki for more information and the instructions, how to set the shared memory size in different scenarios.
+Starting from the release **20.10.1**, there is no single-process Firefox image and the multi-process mode is always enabled. Be aware, that multi-process requires larger shared memory (`/dev/shm`). At least 256MB is recommended. Please check the [Firefox multi-process][that-wiki-firefox-multiprocess] page in Wiki for more information and the instructions, how to set the shared memory size in different scenarios.
 
 ***
 
@@ -58,11 +58,6 @@ The following image tags are regularly maintained and rebuilt:
 
     ![badge-VERSION_STICKER_DEFAULT][badge-VERSION_STICKER_DEFAULT]
     ![badge-github-commit-default][badge-github-commit-default]
-
-- `singleprocess` is also similar to `latest`, but it is built without the build argument **ARG_MOZ_FORCE_DISABLE_E10S**, so the Firefox multiprocess is **disabled**
-
-    ![badge-VERSION_STICKER_SINGLEPROCESS][badge-VERSION_STICKER_SINGLEPROCESS]
-    ![badge-github-commit-singleprocess][badge-github-commit-singleprocess]
 
 ### Dockerfiles
 
@@ -125,13 +120,13 @@ Note that the default **VNC user** password is **headless**.
 
 ## Firefox multi-process
 
-Firefox multi-process (also known as **Electrolysis** or just **E10S**) can cause heavy crashing in Docker containers (**Gah. Your tab just crashed.**) if there is not enough shared memory.
+Firefox multi-process (also known as **Electrolysis** or just **E10S**) can cause heavy crashing in Docker containers if there is not enough shared memory (**Gah. Your tab just crashed.**).
 
 In Firefox versions till **76.0.1** it has been possible to disable multi-process by setting the environment variable **MOZ_FORCE_DISABLE_E10S**. However, in Firefox **77.0.1** it has caused ugly scrambling of almost all web pages, because they were not decompressed.
 
-Mozilla has fixed the problem in the next release, but they still plan to stop supporting the switch completely. That is why I've decided, that the mainstream images tagged as `latest` and `default` will use multi-process by default, even if it requires larger shared memory. On the positive side, performance should be higher and Internet browsing should be sand-boxed.
+Mozilla has fixed the problem in the next release, but they warned about not supporting the switch in future. That is why I've decided, that the mainstream image tagged as `latest` will use multi-process by default, even if it requires larger shared memory. On the positive side, performance should be higher and Internet browsing should be sand-boxed.
 
-The previous image tagged as `multiprocess` has been replaced by the `singleprocess` one, which can be used in scenarios, where increasing the shared memory size is not possible or not wanted.
+For some time I've maintained also `singleprocess` images intended for scenarios, where increasing the shared memory size is not possible or not wanted. However, by Firefox **81.0** I've noticed, that the environment variable **MOZ_FORCE_DISABLE_E10S** has no effect any more. Since then all images run Firefox in multi-process mode.
 
 Please check the Wiki page [Firefox multi-process][that-wiki-firefox-multiprocess] for more information and the instructions, how the shared memory size can be set in different scenarios.
 
@@ -263,9 +258,3 @@ Credit goes to all the countless people and companies, who contribute to open so
 [badge-VERSION_STICKER_DEFAULT]: https://badgen.net/badge/version%20sticker/ubuntu18.04.5-firefox81.0/blue
 
 [badge-github-commit-default]: https://images.microbadger.com/badges/commit/accetto/xubuntu-vnc-novnc-firefox:default.svg
-
-<!-- singleprocess tag badges -->
-
-[badge-VERSION_STICKER_SINGLEPROCESS]: https://badgen.net/badge/version%20sticker/ubuntu18.04.5-firefox81.0/blue
-
-[badge-github-commit-singleprocess]: https://images.microbadger.com/badges/commit/accetto/xubuntu-vnc-novnc-firefox:singleprocess.svg

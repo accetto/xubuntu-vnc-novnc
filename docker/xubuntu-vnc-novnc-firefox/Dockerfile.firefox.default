@@ -1,23 +1,24 @@
-# ./hooks/build nux-default
-# ./hooks/build dfw-default
+# ./hooks/build default
+# ./hooks/test default
 # ./hooks/build dev-default
+# ./hooks/test dev-default
 
-### Build it locally like, for example:
-### ./utils/util-hdx.sh Dockerfile.firefox.default 2
-### or for example
-### ./utils/util-hdx.sh Dockerfile.firefox.default 2 --no-cache
-### Test it locally like, for example:
-### ./hooks/test dfw-default
-### Result last line should be:
-### + exit 0
-### If 'exit 1' then adjust the version sticker variables in
-### ./hooks/env
+### Build and test 'dev-default' tag locally like
+### ./hooks/build dev-default
+### ./hooks/test dev-default
+### or with additional arguments
+### ./hooks/build dev-default
+### ./hooks/test dev-default --no-cache
+### or using the utility
+### ./utils/util-hdx.sh Dockerfile 3
+### ./utils/util-hdx.sh Dockerfile 4
+### The last output line should be '+ exit 0'
+### If '+ exit 1' then adjust the version sticker
+### variables in script './hooks/env'
 
 ARG BASETAG=latest
 
 FROM accetto/xubuntu-vnc-novnc:${BASETAG} as stage-firefox
-
-ARG ARG_MOZ_FORCE_DISABLE_E10S
 
 ### Switch to root user before install
 USER 0
@@ -44,10 +45,6 @@ RUN apt-get update && apt-get install -y \
 COPY [ "./src/firefox/home/Desktop", "${HOME}/Desktop/" ]
 COPY [ "./src/firefox/home/config/xfce4", "${HOME}/.config/xfce4/" ]
 COPY [ "./src/startup/version_sticker.sh", "${STARTUPDIR}/" ]
-
-### Firefox multi-process causes a lot of "Gah. Your tab just crashed."
-### The only way to disable it since Firefox v68.0 is through this environment variable.
-ENV MOZ_FORCE_DISABLE_E10S=${ARG_MOZ_FORCE_DISABLE_E10S:+1}
 
 ### Fix permissions
 RUN \

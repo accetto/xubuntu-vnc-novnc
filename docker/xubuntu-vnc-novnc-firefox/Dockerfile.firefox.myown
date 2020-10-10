@@ -1,4 +1,4 @@
-# docker build -f Dockerfile.firefox.plus -t accetto/xubuntu-vnc-firefox:myown .
+# docker build -f Dockerfile.firefox.myown -t accetto/xubuntu-vnc-firefox:myown .
 
 ARG BASETAG=latest
 
