@@ -5,8 +5,8 @@
 ### ./hooks/build dev
 ### ./hooks/test dev
 ### or with additional arguments
-### ./hooks/build dev 
-### ./hooks/test dev --no-cache
+### ./hooks/build dev --no-cache
+### ./hooks/test dev
 ### or using the utility
 ### ./utils/util-hdx.sh Dockerfile 1
 ### ./utils/util-hdx.sh Dockerfile 2
