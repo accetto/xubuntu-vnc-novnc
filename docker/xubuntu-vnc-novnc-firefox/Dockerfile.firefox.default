@@ -1,17 +1,15 @@
-# ./hooks/build default
-# ./hooks/test default
 # ./hooks/build dev-default
 # ./hooks/test dev-default
 
-### Build and test 'dev-default' tag locally like
+### Example: Build and test 'dev-default' tag locally like
 ### ./hooks/build dev-default
 ### ./hooks/test dev-default
 ### or with additional arguments
 ### ./hooks/build dev-default
 ### ./hooks/test dev-default --no-cache
 ### or using the utility
-### ./utils/util-hdx.sh Dockerfile 3
-### ./utils/util-hdx.sh Dockerfile 4
+### ./utils/util-hdx.sh Dockerfile 1
+### ./utils/util-hdx.sh Dockerfile 2
 ### The last output line should be '+ exit 0'
 ### If '+ exit 1' then adjust the version sticker
 ### variables in script './hooks/env'

@@ -6,6 +6,12 @@
 
 ***
 
+### Release 20.10.2
+
+- Updated versions:
+  - Chromium Browser **86.0.4240.75**
+  - Firefox **82.0**
+
 ### Release 20.10.1
 
 - hook scripts updated (all images)
