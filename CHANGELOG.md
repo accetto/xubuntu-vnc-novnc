@@ -6,6 +6,12 @@
 
 ***
 
+### Release 20.11
+
+- Updated versions:
+  - Chromium Browser **86.0.4240.198**
+  - Firefox **83.0**
+
 ### Release 20.10.2
 
 - Updated versions:
@@ -18,7 +24,7 @@
   - automatic archiving of previous image versions removed
 - **xubuntu-vnc-novnc-firefox**
   - switch **MOZ_FORCE_DISABLE_E10S=1** seems not working any more
-    - build argument **ARG_MOZ_FORCE_DISABLE_E10S** removed 
+    - build argument **ARG_MOZ_FORCE_DISABLE_E10S** removed
     - environment variable **MOZ_FORCE_DISABLE_E10S** removed
     - `singleprocess` tag removed
     - hook scripts updated accordingly
