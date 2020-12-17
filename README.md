@@ -16,7 +16,9 @@
 ![badge-github-commits][badge-github-commits]
 ![badge-github-last-commit][badge-github-last-commit]
 
-**TIP** Unless you need [noVNC][novnc], you can also use my other images from the project [accetto/xubuntu-vnc][accetto-github-xubuntu-vnc] ([image hierarchy][accetto-xubuntu-vnc-wiki-image-hierarchy]).
+**Tip** If you want newer images based on [Ubuntu 20.04 LTS][docker-ubuntu] with the latest [TigerVNC][tigervnc-releases]/[noVNC][novnc-releases] versions, please check the **third generation** (G3) [accetto/ubuntu-vnc-xfce-g3][accetto-docker-ubuntu-vnc-xfce-g3], [accetto/ubuntu-vnc-xfce-chromium-g3][accetto-docker-ubuntu-vnc-xfce-chromium-g3] or [accetto/ubuntu-vnc-xfce-firefox-g3][accetto-docker-ubuntu-vnc-xfce-firefox-g3].
+
+**Tip** Unless you need [noVNC][novnc], you can also use my other images from the project [accetto/xubuntu-vnc][accetto-github-xubuntu-vnc] ([image hierarchy][accetto-xubuntu-vnc-wiki-image-hierarchy]).
 
 ***
 
@@ -110,6 +112,10 @@ Credit goes to all the countless people and companies, who contribute to open so
 [accetto-github-xubuntu-vnc]: https://github.com/accetto/xubuntu-vnc/
 [accetto-xubuntu-vnc-wiki-image-hierarchy]: https://github.com/accetto/xubuntu-vnc/wiki/Image-hierarchy
 
+[accetto-docker-ubuntu-vnc-xfce-g3]: https://hub.docker.com/r/accetto/ubuntu-vnc-xfce-g3
+[accetto-docker-ubuntu-vnc-xfce-chromium-g3]: https://hub.docker.com/r/accetto/ubuntu-vnc-xfce-chromium-g3
+[accetto-docker-ubuntu-vnc-xfce-firefox-g3]: https://hub.docker.com/r/accetto/ubuntu-vnc-xfce-firefox-g3
+
 [accetto-docker-argbash-docker]: https://hub.docker.com/r/accetto/argbash-docker
 [accetto-github-argbash-docker-utils]: https://github.com/accetto/argbash-docker/tree/master/utils
 
@@ -122,7 +128,9 @@ Credit goes to all the countless people and companies, who contribute to open so
 [firefox]: https://www.mozilla.org
 [git]: https://git-scm.com/
 [novnc]: https://github.com/kanaka/noVNC
+[novnc-releases]: https://github.com/novnc/noVNC/releases
 [tigervnc]: http://tigervnc.org
+[tigervnc-releases]: https://github.com/TigerVNC/tigervnc/releases
 [xfce]: http://www.xfce.org
 
 <!-- github badges -->
