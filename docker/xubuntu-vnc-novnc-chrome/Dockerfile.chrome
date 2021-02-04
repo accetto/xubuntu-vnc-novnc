@@ -1,0 +1,59 @@
+# ./hooks/build dev
+# ./hooks/test dev
+
+### Example: Build and test 'dev' tag locally like
+### ./hooks/build dev
+### ./hooks/test dev
+### or with additional arguments
+### ./hooks/build dev --no-cache
+### ./hooks/test dev
+### or using the utility
+### ./utils/util-hdx.sh Dockerfile 1
+### ./utils/util-hdx.sh Dockerfile 2
+### The last output line should be '+ exit 0'
+### If '+ exit 1' then adjust the version sticker
+### variables in script './hooks/env'
+
+ARG BASETAG=latest
+
+FROM accetto/xubuntu-vnc-novnc:${BASETAG} as stage-chrome
+
+### Switch to root user before install
+USER 0
+
+### 'apt-get clean' runs automatically
+RUN \
+    wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | apt-key add - \
+    && echo "deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main" > /etc/apt/sources.list.d/google-chrome.list \
+    &&apt-get update \
+    && apt-get install -y \
+        google-chrome-stable \
+    && apt-get -y autoremove \
+    && rm -rf /var/lib/apt/lists/*
+
+### Preconfigure Xfce desktop
+COPY [ "./src/home/Desktop", "${HOME}/Desktop/" ]
+COPY [ "./src/home/config/xfce4", "${HOME}/.config/xfce4/" ]
+COPY [ "./src/startup/version_sticker.sh", "${STARTUPDIR}/" ]
+
+### Fix permissions
+RUN \
+    chmod a+wx "${STARTUPDIR}"/version_sticker.sh \
+    && "${STARTUPDIR}"/set_user_permissions.sh "${STARTUPDIR}" "${HOME}"
+
+FROM stage-chrome as stage-final
+
+ARG ARG_REFRESHED_AT
+ARG ARG_VERSION_STICKER
+ARG ARG_VCS_REF
+
+LABEL \
+    org.label-schema.vcs-ref="${ARG_VCS_REF}" \
+    version-sticker="${ARG_VERSION_STICKER}"
+
+ENV \
+    REFRESHED_AT=${ARG_REFRESHED_AT} \
+    VERSION_STICKER=${ARG_VERSION_STICKER}
+
+### Switch to default application user (non-root)
+USER 1001
