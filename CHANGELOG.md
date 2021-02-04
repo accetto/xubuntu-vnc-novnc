@@ -9,7 +9,7 @@
 ### Release 22.02
 
 - **xubuntu-vnc-novnc-chrome** image added
-  - current version **88.0.4324.146**
+  - current version **88.0.4324.150**
 - Updated versions:
   - Firefox **85.0**
 
