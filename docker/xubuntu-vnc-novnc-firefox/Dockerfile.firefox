@@ -22,7 +22,8 @@ FROM accetto/xubuntu-vnc-novnc:${BASETAG} as stage-firefox
 USER 0
 
 ### 'apt-get clean' runs automatically
-RUN apt-get update && apt-get install -y \
+RUN apt-get update \
+    && DEBIAN_FRONTEND=noninteractive apt-get install -y \
         firefox \
     && apt-get -y autoremove \
     && rm -rf /var/lib/apt/lists/*
@@ -54,11 +55,8 @@ COPY [ "./src/firefox.plus/home/Desktop", "${HOME}/Desktop/" ]
 
 RUN \
     chmod +x ${HOME}/firefox.plus/*.sh \
-    && gtk-update-icon-cache -f /usr/share/icons/hicolor
-
-### Fix permissions
-RUN \
-    chmod a+wx "${STARTUPDIR}"/version_sticker.sh \
+    && gtk-update-icon-cache -f /usr/share/icons/hicolor \
+    && chmod a+wx "${STARTUPDIR}"/version_sticker.sh \
     && "${STARTUPDIR}"/set_user_permissions.sh "${STARTUPDIR}" "${HOME}"
 
 FROM stage-plus as stage-final

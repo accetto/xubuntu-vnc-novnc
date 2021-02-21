@@ -6,12 +6,19 @@
 
 ***
 
-### Release 22.02.1
+### Release 21.02.2
+
+- fixes in CHANGELOG (release numbering)
+- some optimizations in all Dockerfiles
+- Updated versions:
+  - Chrome **88.0.4324.182**
+
+### Release 21.02.1
 
 - Updated versions:
   - Firefox **85.0.1**
 
-### Release 22.02
+### Release 21.02
 
 - **xubuntu-vnc-novnc-chrome** image added
   - current version **88.0.4324.150**

@@ -29,7 +29,8 @@ LABEL \
     org.label-schema.vcs-url="https://github.com/accetto/xubuntu-vnc-novnc"
 
 ### 'apt-get clean' runs automatically
-RUN apt-get update && apt-get install -y \
+RUN apt-get update \
+    && DEBIAN_FRONTEND=noninteractive apt-get install -y \
         inetutils-ping \
         lsb-release \
         net-tools \
@@ -77,13 +78,13 @@ RUN \
 FROM stage-ubuntu as stage-xfce
 
 ENV \
-    DEBIAN_FRONTEND=noninteractive \
     LANG='en_US.UTF-8' \
     LANGUAGE='en_US:en' \
     LC_ALL='en_US.UTF-8'
 
 ### 'apt-get clean' runs automatically
-RUN apt-get update && apt-get install -y \
+RUN apt-get update \
+    && DEBIAN_FRONTEND=noninteractive apt-get install -y \
         locales \
         supervisor \
         xfce4 \
@@ -112,7 +113,8 @@ ENV NO_VNC_HOME=/usr/share/usr/local/share/noVNCdim
 ### ## Use the older version of websockify to prevent hanging connections on offline containers, 
 ### see https://github.com/ConSol/docker-headless-vnc-container/issues/50
 ### installed into '/usr/share/usr/local/share/noVNCdim'
-RUN apt-get update && apt-get install -y \
+RUN apt-get update \
+    && DEBIAN_FRONTEND=noninteractive apt-get install -y \
         python-numpy \
     && mkdir -p ${NO_VNC_HOME}/utils/websockify \
     && wget -qO- https://github.com/novnc/noVNC/archive/v1.2.0.tar.gz | tar xz --strip 1 -C ${NO_VNC_HOME} \
