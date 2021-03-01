@@ -6,6 +6,11 @@
 
 ***
 
+### Release 21.03
+
+- Updated versions:
+  - Firefox **86.0**
+
 ### Release 21.02.2
 
 - fixes in CHANGELOG (release numbering)
