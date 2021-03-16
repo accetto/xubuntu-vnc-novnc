@@ -6,6 +6,12 @@
 
 ***
 
+### Release 21.03.2
+
+- Updated versions:
+  - Chromium **89.0.4389.82**
+  - Chrome **89.0.4389.90**
+
 ### Release 21.03.1
 
 - base **ubuntu:18.04** has been updated by Docker
