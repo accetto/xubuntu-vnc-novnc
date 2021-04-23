@@ -6,6 +6,12 @@
 
 ***
 
+### Release 21.04
+
+- Updated versions:
+  - Chromium **90.0.4430.72**
+  - Chrome **90.0.4430.85**
+
 ### Release 21.03.3
 
 - Updated versions:
