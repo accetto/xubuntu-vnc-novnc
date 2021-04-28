@@ -6,6 +6,13 @@
 
 ***
 
+### Release 21.04.1
+
+- TigerVNC from [Release Mirror on accetto/tigervnc][accetto-tigervnc-release-mirror] because **Bintray** is closing on 2021-05-01
+- Updated versions:
+  - Chrome **90.0.4430.93**
+  - Firefox **88.0**
+
 ### Release 21.04
 
 - Updated versions:
@@ -402,6 +409,8 @@
 ***
 
 [this-docker]: https://hub.docker.com/u/accetto/
+
+[accetto-tigervnc-release-mirror]: https://github.com/accetto/tigervnc/releases
 
 [this-github]: https://github.com/accetto/xubuntu-vnc-novnc/
 [this-wiki]: https://github.com/accetto/xubuntu-vnc-novnc/wiki
