@@ -6,6 +6,13 @@
 
 ***
 
+### Release 21.05
+
+- Updated versions:
+  - Chrome **90.0.4430.212**
+  - Chromium **90.0.4430.93**
+  - Firefox **88.0.1**
+
 ### Release 21.04.1
 
 - TigerVNC from [Release Mirror on accetto/tigervnc][accetto-tigervnc-release-mirror] because **Bintray** is closing on 2021-05-01
