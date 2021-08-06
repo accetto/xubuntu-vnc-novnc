@@ -1,5 +1,5 @@
-# ./hooks/build dev-default
-# ./hooks/test dev-default
+# ./hooks/build default
+# ./hooks/test default
 
 ### Example: Build and test 'dev-default' tag locally like
 ### ./hooks/build dev-default

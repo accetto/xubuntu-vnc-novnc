@@ -48,7 +48,6 @@ The following image tags are regularly maintained and rebuilt:
 - `latest` is based on `accetto/xubuntu-vnc-novnc:latest`
 
     ![badge-VERSION_STICKER_LATEST][badge-VERSION_STICKER_LATEST]
-    ![badge-github-commit-latest][badge-github-commit-latest]
 
 ### Dockerfiles
 
@@ -172,5 +171,3 @@ Credit goes to all the countless people and companies, who contribute to open so
 <!-- latest tag badges -->
 
 [badge-VERSION_STICKER_LATEST]: https://badgen.net/badge/version%20sticker/ubuntu18.04.5-chromium91.0.4472.101/blue
-
-[badge-github-commit-latest]: https://images.microbadger.com/badges/commit/accetto/xubuntu-vnc-novnc-chromium.svg

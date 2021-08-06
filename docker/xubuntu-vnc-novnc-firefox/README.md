@@ -54,12 +54,10 @@ The following image tags are regularly maintained and rebuilt:
 - `latest` is based on `accetto/xubuntu-vnc-novnc:latest`, it includes the **plus** features and it is built with the build argument **ARG_MOZ_FORCE_DISABLE_E10S**, so the Firefox multiprocess is **disabled** (see below)
 
     ![badge-VERSION_STICKER_LATEST][badge-VERSION_STICKER_LATEST]
-    ![badge-github-commit-latest][badge-github-commit-latest]
 
 - `default` is similar to `latest`, but it doesn't include the **plus** features
 
     ![badge-VERSION_STICKER_DEFAULT][badge-VERSION_STICKER_DEFAULT]
-    ![badge-github-commit-default][badge-github-commit-default]
 
 ### Dockerfiles
 
@@ -257,12 +255,8 @@ Credit goes to all the countless people and companies, who contribute to open so
 
 <!-- latest tag badges -->
 
-[badge-VERSION_STICKER_LATEST]: https://badgen.net/badge/version%20sticker/ubuntu18.04.5-firefox90.0/blue
-
-[badge-github-commit-latest]: https://images.microbadger.com/badges/commit/accetto/xubuntu-vnc-novnc-firefox.svg
+[badge-VERSION_STICKER_LATEST]: https://badgen.net/badge/version%20sticker/ubuntu18.04.5-firefox90.0.2/blue
 
 <!-- default tag badges -->
 
-[badge-VERSION_STICKER_DEFAULT]: https://badgen.net/badge/version%20sticker/ubuntu18.04.5-firefox90.0/blue
-
-[badge-github-commit-default]: https://images.microbadger.com/badges/commit/accetto/xubuntu-vnc-novnc-firefox:default.svg
+[badge-VERSION_STICKER_DEFAULT]: https://badgen.net/badge/version%20sticker/ubuntu18.04.5-firefox90.0.2/blue

@@ -47,12 +47,10 @@ The following image tags are regularly maintained and rebuilt:
 - `latest` is based on `ubuntu:latest`
 
     ![badge-VERSION_STICKER_LATEST][badge-VERSION_STICKER_LATEST]
-    ![badge-github-commit-latest][badge-github-commit-latest]
 
 - `lab` is also based on `ubuntu:latest`, but built with `ARG_SUPPORT_USER_GROUP_OVERRIDE`
 
     ![badge-VERSION_STICKER_LAB][badge-VERSION_STICKER_LAB]
-    ![badge-github-commit-lab][badge-github-commit-lab]
 
 There are also archive images that are tagged like `ubuntu18.04.3` and similar. Those are previous production images and they can be useful for testing.
 
@@ -330,10 +328,6 @@ Credit goes to all the countless people and companies, who contribute to open so
 
 [badge-VERSION_STICKER_LATEST]: https://badgen.net/badge/version%20sticker/ubuntu18.04.5/blue
 
-[badge-github-commit-latest]: https://images.microbadger.com/badges/commit/accetto/xubuntu-vnc-novnc.svg
-
 <!-- lab tag badges -->
 
 [badge-VERSION_STICKER_LAB]: https://badgen.net/badge/version%20sticker/ubuntu18.04.5/blue
-
-[badge-github-commit-lab]: https://images.microbadger.com/badges/commit/accetto/xubuntu-vnc-novnc:lab.svg
