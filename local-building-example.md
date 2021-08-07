@@ -37,7 +37,7 @@ The full building pipeline consists of the following four hook scripts and one u
 - `build`
 - `test`
 - `push`
-- `util-readme.sh`
+- `util-refresh-readme.sh`
 
 The order of executing the scripts is important.
 
