@@ -1,5 +1,13 @@
 # Local building example
 
+- [Local building example](#local-building-example)
+  - [Preparation](#preparation)
+  - [Building pipeline](#building-pipeline)
+    - [Step 1: `build`](#step-1-build)
+    - [Step 2: `test`](#step-2-test)
+    - [Step 3: `push`](#step-3-push)
+    - [All steps at once](#all-steps-at-once)
+
 Docker Hub has removed auto-building from free plans since 2021-07-26.
 
 This page describes how to build the images locally and optionally push them to Docker Hub.
@@ -35,7 +43,7 @@ The order of executing the scripts is important.
 
 The commands in the following example would build and publish the image `accetto/xubuntu-vnc-novnc:latest`.
 
-The helper utility `builder.sh` will be used. Alternatively you can use also the hook scripts themselves.
+The helper utility `builder.sh` will be used. Alternatively you can also use the hook scripts directly.
 
 ### Step 1: `build`
 
