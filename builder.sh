@@ -28,7 +28,8 @@ main() {
 
     local backup_pwd
     local context
-    local result
+    local last_line
+    local test_result
 
     case "${repo}" in
 
@@ -100,9 +101,14 @@ main() {
             echo
 
             ### test version sticker
-            result=$( hooks/test "${tag}" 2>&1 | tail -n1  )
+            test_result=$( hooks/test "${tag}" 2>&1 | tail -n5  )
 
-            if [ "${result}" == '+ exit 0' ] ; then
+            echo "${test_result}"
+            echo
+
+            last_line=$(echo "${test_result}" | tail -n1)
+
+            if [ "${last_line}" == '+ exit 0' ] ; then
 
                 docker_hub_connect
 
@@ -117,6 +123,12 @@ main() {
                     hooks/push "${tag}"
 
                     docker logout
+
+                    echo
+                    echo "Refreshing README..."
+
+                    cd ../../utils
+                    ./util-refresh-readme.sh
 
                 else
 
