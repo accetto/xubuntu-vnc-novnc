@@ -6,6 +6,12 @@
 
 ***
 
+### Release 21.09
+
+- Updated versions:
+  - Chrome **93.0.4577.63**
+  - Firefox **91.0.2**
+
 ### Release 21.08.1
 
 - utility `builder.sh` improved
