@@ -6,6 +6,12 @@
 
 ***
 
+### Release 21.09.1
+
+- utility `builder.sh` improved
+- Updated versions:
+  - Firefox **92.0**
+
 ### Release 21.09
 
 - Updated versions:
