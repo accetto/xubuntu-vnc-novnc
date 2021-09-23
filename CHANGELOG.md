@@ -6,6 +6,12 @@
 
 ***
 
+### Release 21.09.2
+
+- Updated versions:
+  - Chrome **94.0.4606.54**
+  - Chromium **93.0.4577.63**
+
 ### Release 21.09.1
 
 - utility `builder.sh` improved
