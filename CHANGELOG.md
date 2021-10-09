@@ -6,6 +6,15 @@
 
 ***
 
+### Release 21.10
+
+- Base image **ubuntu:18.04** has been updated to version **18.04.6**
+  - derived images inherit this change
+- Updated versions:
+  - Chrome **94.0.4606.81**
+  - Chromium **94.0.4606.71**
+  - Firefox **93.0**
+
 ### Release 21.09.2
 
 - Updated versions:
