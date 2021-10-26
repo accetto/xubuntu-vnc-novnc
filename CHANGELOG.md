@@ -6,6 +6,12 @@
 
 ***
 
+### Release 21.10.1
+
+- Updated versions:
+  - Chrome **95.0.4638.54**
+  - Chromium **94.0.4606.81**
+
 ### Release 21.10
 
 - Base image **ubuntu:18.04** has been updated to version **18.04.6**
