@@ -6,6 +6,13 @@
 
 ***
 
+### Release 21.11
+
+- Updated versions:
+  - Chrome **95.0.4638.69**
+  - Chromium **95.0.4638.69**
+  - Firefox **94.0**
+
 ### Release 21.10.1
 
 - Updated versions:
