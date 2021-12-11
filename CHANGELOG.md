@@ -6,6 +6,11 @@
 
 ***
 
+### Release 21.12
+
+- Updated versions:
+  - Firefox **95.0**
+
 ### Release 21.11
 
 - Updated versions:
