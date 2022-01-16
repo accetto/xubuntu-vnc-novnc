@@ -6,6 +6,12 @@
 
 ***
 
+### Release 22.01.1
+
+- Updated versions:
+  - Chrome **97.0.4692.71**
+  - Chromium **97.0.4692.71**
+
 ### Release 22.01
 
 - Updated versions:
