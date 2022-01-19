@@ -6,6 +6,10 @@
 
 ***
 
+### Release 22.01.2
+
+- `Dockerfile` uses **TigerVNC** releases from **SourceForge** website
+
 ### Release 22.01.1
 
 - Updated versions:
