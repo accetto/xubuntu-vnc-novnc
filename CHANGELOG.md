@@ -6,6 +6,11 @@
 
 ***
 
+### Release 22.02
+
+- Updated versions:
+  - Firefox **97.0**
+
 ### Release 22.01.2
 
 - `Dockerfile` uses **TigerVNC** releases from **SourceForge** website
