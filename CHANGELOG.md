@@ -6,6 +6,17 @@
 
 ***
 
+### Final release 22.03.1
+
+The repository is **retired** and **archived**. It will not be developed any further and the related images on Docker Hub will not be rebuilt any more. They will phase out and they will be deleted after becoming too old.
+
+Please use the newer **third generation** (G3) repository [accetto/ubuntu-vnc-xfce-g3][accetto-ubuntu-vnc-xfce-g3] and the related images on Docker Hub instead.
+
+If you still need images based on `Ubuntu 18.04 LTS`, then feel free using the repository for building the images locally.
+
+- Updated versions:
+  - Firefox **98.0**
+
 ### Release 22.03
 
 - Updated versions:
@@ -547,3 +558,5 @@
 [this-wiki-image-hierarchy]: https://github.com/accetto/xubuntu-vnc-novnc/wiki/Image-hierarchy
 
 [that-wiki-firefox-multiprocess]: https://github.com/accetto/xubuntu-vnc/wiki/Firefox-multiprocess
+
+[accetto-ubuntu-vnc-xfce-g3]: https://github.com/accetto/ubuntu-vnc-xfce-g3

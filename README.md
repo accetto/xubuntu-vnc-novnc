@@ -6,6 +6,10 @@
 
 ***
 
+**Attention!** The repository is **retired** and **archived**. It will not be developed any further and the related images on Docker Hub will not be rebuilt any more. They will phase out and they will be deleted after becoming too old. Please use the newer **third generation** (G3) repository [accetto/ubuntu-vnc-xfce-g3][accetto-ubuntu-vnc-xfce-g3] and the related images on Docker Hub instead. If you still need images based on `Ubuntu 18.04 LTS`, then feel free using the repository for building the images locally.
+
+***
+
 ![badge-github-release][badge-github-release]
 ![badge-github-release-date][badge-github-release-date]
 ![badge-github-stars][badge-github-stars]
@@ -17,8 +21,6 @@
 ![badge-github-last-commit][badge-github-last-commit]
 
 **Tip** If you want newer images based on [Ubuntu 20.04 LTS][docker-ubuntu] with the latest [TigerVNC][tigervnc-releases]/[noVNC][novnc-releases] versions, please check the **third generation** (G3) [accetto/ubuntu-vnc-xfce-g3][accetto-docker-ubuntu-vnc-xfce-g3], [accetto/ubuntu-vnc-xfce-chromium-g3][accetto-docker-ubuntu-vnc-xfce-chromium-g3] or [accetto/ubuntu-vnc-xfce-firefox-g3][accetto-docker-ubuntu-vnc-xfce-firefox-g3].
-
-**Tip** Unless you need [noVNC][novnc], you can also use my other images from the project [accetto/xubuntu-vnc][accetto-github-xubuntu-vnc] ([image hierarchy][accetto-xubuntu-vnc-wiki-image-hierarchy]).
 
 ***
 
@@ -111,6 +113,8 @@ Credit goes to all the countless people and companies, who contribute to open so
 
 [accetto-github-xubuntu-vnc]: https://github.com/accetto/xubuntu-vnc/
 [accetto-xubuntu-vnc-wiki-image-hierarchy]: https://github.com/accetto/xubuntu-vnc/wiki/Image-hierarchy
+
+[accetto-ubuntu-vnc-xfce-g3]: https://github.com/accetto/ubuntu-vnc-xfce-g3
 
 [accetto-docker-ubuntu-vnc-xfce-g3]: https://hub.docker.com/r/accetto/ubuntu-vnc-xfce-g3
 [accetto-docker-ubuntu-vnc-xfce-chromium-g3]: https://hub.docker.com/r/accetto/ubuntu-vnc-xfce-chromium-g3
