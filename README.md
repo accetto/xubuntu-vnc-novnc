@@ -4,12 +4,6 @@
 
 [Docker Hub][this-docker] - [Git Hub][this-github] - [Changelog][this-changelog] - [Wiki][this-wiki] - [Hierarchy][this-wiki-image-hierarchy]
 
-***
-
-**Attention!** The repository is **retired** and **archived**. It will not be developed any further and the related images on Docker Hub will not be rebuilt any more. They will phase out and they will be deleted after becoming too old. Please use the newer **third generation** (G3) repository [accetto/ubuntu-vnc-xfce-g3][accetto-ubuntu-vnc-xfce-g3] and the related images on Docker Hub instead. If you still need images based on `Ubuntu 18.04 LTS`, then feel free using the repository for building the images locally.
-
-***
-
 ![badge-github-release][badge-github-release]
 ![badge-github-release-date][badge-github-release-date]
 ![badge-github-stars][badge-github-stars]
@@ -20,13 +14,48 @@
 ![badge-github-commits][badge-github-commits]
 ![badge-github-last-commit][badge-github-last-commit]
 
-**Tip** If you want newer images based on [Ubuntu 20.04 LTS][docker-ubuntu] with the latest [TigerVNC][tigervnc-releases]/[noVNC][novnc-releases] versions, please check the **third generation** (G3) [accetto/ubuntu-vnc-xfce-g3][accetto-docker-ubuntu-vnc-xfce-g3], [accetto/ubuntu-vnc-xfce-chromium-g3][accetto-docker-ubuntu-vnc-xfce-chromium-g3] or [accetto/ubuntu-vnc-xfce-firefox-g3][accetto-docker-ubuntu-vnc-xfce-firefox-g3].
+***
+
+- [Headless Ubuntu/Xfce containers with VNC/noVNC](#headless-ubuntuxfce-containers-with-vncnovnc)
+  - [Project `accetto/xubuntu-vnc-novnc`](#project-accettoxubuntu-vnc-novnc)
+    - [Introduction](#introduction)
+    - [Image generations](#image-generations)
+    - [Project versions](#project-versions)
+    - [Description](#description)
+    - [Git Hub subfolders / Docker image sets](#git-hub-subfolders--docker-image-sets)
+      - [xubuntu-vnc-novnc](#xubuntu-vnc-novnc)
+      - [xubuntu-vnc-novnc-chromium](#xubuntu-vnc-novnc-chromium)
+      - [xubuntu-vnc-novnc-firefox](#xubuntu-vnc-novnc-firefox)
+      - [utils](#utils)
+  - [Issues](#issues)
+  - [Credits](#credits)
 
 ***
 
-This project repository contains resources for building various Docker images based on [Ubuntu][docker-ubuntu] with [Xfce][xfce] desktop environment and [VNC][tigervnc]/[noVNC][novnc] servers for headless use.
+### Introduction
 
-The resources for the individual images and their variations are stored in the subfolders of the [Git Hub][this-github] repository and the image features are described in the individual README files. Additional descriptions can be found in the common project [Wiki][this-wiki].
+This repository contains resources for building Docker images based on [Ubuntu 18.04 LTS][docker-ubuntu] with [Xfce][xfce] desktop environment and [VNC][tigervnc]/[noVNC][novnc] servers for headless use.
+
+### Image generations
+
+This is the **second generation** (G2) of my headless images, that I've retired back in March 2022. However, because I've noticed that the images are still pulled, I've revived the project in November 2022. The current **second version** (G2v2) brings some improvements, mostly in the building pipeline and supporting scripts.
+
+If you want the **newer images** based on [Ubuntu 20.04 LTS][docker-ubuntu] with the latest [TigerVNC][tigervnc-releases]/[noVNC][novnc-releases] versions, please check the **third generation** (G3) [accetto/ubuntu-vnc-xfce-g3][accetto-docker-ubuntu-vnc-xfce-g3], [accetto/ubuntu-vnc-xfce-chromium-g3][accetto-docker-ubuntu-vnc-xfce-chromium-g3] or [accetto/ubuntu-vnc-xfce-firefox-g3][accetto-docker-ubuntu-vnc-xfce-firefox-g3].
+
+### Project versions
+
+This file describes the **second version** (G2v2) of the project.
+
+The **first version** (G2v1, or simply G2) will still be available in this **GitHub** repository as the archived branch `archived-generation-g2v1`.
+
+The version `G2v2` brings the following changes comparing to the previous version `G2v1`:
+
+- The values of the **version sticker** variables (`VERSION_STICKER_*`) in the `env` hook scripts are not hardcoded, but initialized from the related environment variables.
+- The helper utility `util-refresh-readme.sh` does not update the original `README.md` files, but their clones `scrap_readme.md`. The content of these temporary files is intended to be copy-and-pasted to the **Docker Hub**.
+
+### Description
+
+The resources for the individual images and their variations are stored in the folders of the [Git Hub][this-github] repository and the image features are described in the individual README files. Additional descriptions can be found in the common project [Wiki][this-wiki].
 
 All images are part of a growing [image hierarchy][this-wiki-image-hierarchy].
 

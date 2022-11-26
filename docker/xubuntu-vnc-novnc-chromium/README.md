@@ -4,24 +4,42 @@
 
 [Docker Hub][this-docker] - [Git Hub][this-github] - [Changelog][this-changelog] - [Wiki][this-wiki] - [Hierarchy][this-wiki-image-hierarchy]
 
-***
-
-**Attention!** The repository is **retired** and **archived**. It will not be developed any further and the related images on Docker Hub will not be rebuilt any more. They will phase out and they will be deleted after becoming too old. Please use the newer **third generation** (G3) repository [accetto/ubuntu-vnc-xfce-g3][accetto-ubuntu-vnc-xfce-g3] and the related images on Docker Hub instead. If you still need images based on `Ubuntu 18.04 LTS`, then feel free using the repository for building the images locally.
-
-***
-
 ![badge-docker-pulls][badge-docker-pulls]
 ![badge-docker-stars][badge-docker-stars]
 ![badge-github-release][badge-github-release]
 ![badge-github-release-date][badge-github-release-date]
 
-**Tip** If you want newer images based on [Ubuntu 20.04 LTS][docker-ubuntu] with the latest [TigerVNC][tigervnc-releases]/[noVNC][novnc-releases] versions, please check the **third generation** (G3) [accetto/ubuntu-vnc-xfce-g3][accetto-docker-ubuntu-vnc-xfce-g3], [accetto/ubuntu-vnc-xfce-chromium-g3][accetto-docker-ubuntu-vnc-xfce-chromium-g3] or [accetto/ubuntu-vnc-xfce-firefox-g3][accetto-docker-ubuntu-vnc-xfce-firefox-g3].
+***
+
+- [Headless Ubuntu/Xfce container with VNC/noVNC and Chromium](#headless-ubuntuxfce-container-with-vncnovnc-and-chromium)
+  - [accetto/xubuntu-vnc-novnc-chromium](#accettoxubuntu-vnc-novnc-chromium)
+    - [Introduction](#introduction)
+    - [Description](#description)
+    - [Image tags](#image-tags)
+    - [Dockerfiles](#dockerfiles)
+    - [Ports](#ports)
+    - [Volumes](#volumes)
+    - [Container user accounts](#container-user-accounts)
+    - [Version sticker](#version-sticker)
+  - [Using headless containers](#using-headless-containers)
+  - [Issues](#issues)
+  - [Credits](#credits)
+
+***
 
 **Attention** [Chromium Browser][chromium] in this image runs in `--no-sandbox` mode. You should be aware of the implications. The image is intended for testing and development.
 
 ***
 
-This repository contains resources for building Docker images based on [Ubuntu][docker-ubuntu] with [Xfce][xfce] desktop environment, [VNC][tigervnc]/[noVNC][novnc] servers for headless use and the current [Chromium][chromium] web browser.
+### Introduction
+
+This repository contains resources for building Docker images based on [Ubuntu 18.04 LTS][docker-ubuntu] with [Xfce][xfce] desktop environment and [VNC][tigervnc]/[noVNC][novnc] servers for headless use.
+
+This is the **second generation** (G2) of my headless images, that I've retired back in March 2022. However, because I've noticed that the images are still pulled, I've revived the project in November 2022. The current **second version** (G2v2) brings some improvements, mostly in the building pipeline and supporting scripts.
+
+If you want the **newer images** based on [Ubuntu 20.04 LTS][docker-ubuntu] with the latest [TigerVNC][tigervnc-releases]/[noVNC][novnc-releases] versions, please check the **third generation** (G3) [accetto/ubuntu-vnc-xfce-g3][accetto-docker-ubuntu-vnc-xfce-g3], [accetto/ubuntu-vnc-xfce-chromium-g3][accetto-docker-ubuntu-vnc-xfce-chromium-g3] or [accetto/ubuntu-vnc-xfce-firefox-g3][accetto-docker-ubuntu-vnc-xfce-firefox-g3].
+
+### Description
 
 The images are part of the growing [image hierarchy][this-wiki-image-hierarchy] and they are based on [accetto/xubuntu-vnc-novnc][accetto-docker-xubuntu-vnc-novnc]. They inherit all the features and therefore not the whole description will be repeated here.
 

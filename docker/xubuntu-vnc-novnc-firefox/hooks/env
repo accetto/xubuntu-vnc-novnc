@@ -10,9 +10,9 @@ BASETAG=""
 TODAY=$(date +%Y-%m-%d)
 VERSION_STICKER=""
 
-### Warning! The values must be explicit strings (used by utils).
-VERSION_STICKER_LATEST="ubuntu18.04.6-firefox98.0"
-VERSION_STICKER_DEFAULT="ubuntu18.04.6-firefox98.0"
+### Warning! The values are initialized from the related environment variables.
+VERSION_STICKER_LATEST="${G2_STICKER_BASE:-ubuntu18.04.6}-${G2_STICKER_FIREFOX:-firefox}"
+VERSION_STICKER_DEFAULT="${G2_STICKER_BASE:-ubuntu18.04.6}-${G2_STICKER_FIREFOX:-firefox}"
 
 case "${DOCKER_TAG}" in
 

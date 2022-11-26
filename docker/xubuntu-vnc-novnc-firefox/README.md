@@ -4,18 +4,29 @@
 
 [Docker Hub][this-docker] - [Git Hub][this-github] - [Changelog][this-changelog] - [Wiki][this-wiki] - [Hierarchy][this-wiki-image-hierarchy]
 
-***
-
-**Attention!** The repository is **retired** and **archived**. It will not be developed any further and the related images on Docker Hub will not be rebuilt any more. They will phase out and they will be deleted after becoming too old. Please use the newer **third generation** (G3) repository [accetto/ubuntu-vnc-xfce-g3][accetto-ubuntu-vnc-xfce-g3] and the related images on Docker Hub instead. If you still need images based on `Ubuntu 18.04 LTS`, then feel free using the repository for building the images locally.
-
-***
-
 ![badge-docker-pulls][badge-docker-pulls]
 ![badge-docker-stars][badge-docker-stars]
 ![badge-github-release][badge-github-release]
 ![badge-github-release-date][badge-github-release-date]
 
-**Tip** If you want newer images based on [Ubuntu 20.04 LTS][docker-ubuntu] with the latest [TigerVNC][tigervnc-releases]/[noVNC][novnc-releases] versions, please check the **third generation** (G3) [accetto/ubuntu-vnc-xfce-g3][accetto-docker-ubuntu-vnc-xfce-g3], [accetto/ubuntu-vnc-xfce-chromium-g3][accetto-docker-ubuntu-vnc-xfce-chromium-g3] or [accetto/ubuntu-vnc-xfce-firefox-g3][accetto-docker-ubuntu-vnc-xfce-firefox-g3].
+***
+
+- [Headless Ubuntu/Xfce container with VNC/noVNC and Firefox](#headless-ubuntuxfce-container-with-vncnovnc-and-firefox)
+  - [accetto/xubuntu-vnc-novnc-firefox](#accettoxubuntu-vnc-novnc-firefox)
+    - [Introduction](#introduction)
+    - [Description](#description)
+    - [Image tags](#image-tags)
+    - [Dockerfiles](#dockerfiles)
+    - [Ports](#ports)
+    - [Volumes](#volumes)
+    - [Container user accounts](#container-user-accounts)
+    - [Version sticker](#version-sticker)
+    - [Using headless containers](#using-headless-containers)
+  - [Firefox multi-process](#firefox-multi-process)
+    - [Setting shared memory size](#setting-shared-memory-size)
+  - [Firefox preferences and the plus features](#firefox-preferences-and-the-plus-features)
+  - [Issues](#issues)
+  - [Credits](#credits)
 
 ***
 
@@ -25,7 +36,15 @@ Starting from the release **20.10.1**, there is no single-process Firefox image 
 
 ***
 
-This repository contains resources for building Docker images based on [Ubuntu][docker-ubuntu] with [Xfce][xfce] desktop environment, [VNC][tigervnc]/[noVNC][novnc] servers for headless use and the current [Firefox Quantum][firefox] web browser.
+### Introduction
+
+This repository contains resources for building Docker images based on [Ubuntu 18.04 LTS][docker-ubuntu] with [Xfce][xfce] desktop environment and [VNC][tigervnc]/[noVNC][novnc] servers for headless use.
+
+This is the **second generation** (G2) of my headless images, that I've retired back in March 2022. However, because I've noticed that the images are still pulled, I've revived the project in November 2022. The current **second version** (G2v2) brings some improvements, mostly in the building pipeline and supporting scripts.
+
+If you want the **newer images** based on [Ubuntu 20.04 LTS][docker-ubuntu] with the latest [TigerVNC][tigervnc-releases]/[noVNC][novnc-releases] versions, please check the **third generation** (G3) [accetto/ubuntu-vnc-xfce-g3][accetto-docker-ubuntu-vnc-xfce-g3], [accetto/ubuntu-vnc-xfce-chromium-g3][accetto-docker-ubuntu-vnc-xfce-chromium-g3] or [accetto/ubuntu-vnc-xfce-firefox-g3][accetto-docker-ubuntu-vnc-xfce-firefox-g3].
+
+### Description
 
 The main image is a streamlined and simplified version of my other image [accetto/ubuntu-vnc-xfce-firefox-plus][accetto-docker-ubuntu-vnc-xfce-firefox-plus]. The applicable **plus** features have been re-implemented because **Firefox v67** handles user profiles differently.
 

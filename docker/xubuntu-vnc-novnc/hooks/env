@@ -10,9 +10,9 @@ DOCKER_REPO=${DOCKER_REPO:-accetto/xubuntu-vnc-novnc}
 BASETAG=""
 TODAY=$(date +%Y-%m-%d)
 
-### Warning! The values must be explicit strings (used by utils).
-VERSION_STICKER_LATEST="ubuntu18.04.6"
-VERSION_STICKER_LAB="ubuntu18.04.6"
+### Warning! The values are initialized from the related environment variables.
+VERSION_STICKER_LATEST="${G2_STICKER_BASE:-ubuntu18.04.6}"
+VERSION_STICKER_LAB="${G2_STICKER_BASE:-ubuntu18.04.6}"
 
 VERSION_STICKER="${VERSION_STICKER_LATEST}"
 
