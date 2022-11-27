@@ -129,7 +129,7 @@ Also update the `README` file using the helper utility `util-refresh-readme.sh`.
 ./builder.sh base latest push
 ```
 
-This command will push the new image to Docker Hub.
+This command will push the new image to the **Docker Hub**.
 
 Note that currently you have to update the `README` file on Docker Hub yourself. You can do it in edit mode by simple copy-and-paste from the local file, which you've already updated by the helper utility described above.
 

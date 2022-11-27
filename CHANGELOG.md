@@ -8,7 +8,7 @@
 
 ### Release 22.11
 
-The repository has been revived, because I've noticed, that the images are still pulled.
+The repository has been revived, because I've noticed, that the images are still being pulled.
 
 This is the first release of the **second version** (G2v2) of the project, which brings improvements mostly in the building pipeline and helper utilities.
 
@@ -17,9 +17,10 @@ The **first version** (G2v1, or simply G2) will still be available in this **Git
 The most significant changes in this release are:
 
 - The values of the **version sticker** variables (`VERSION_STICKER_*`) in the `env` hook scripts are not hardcoded, but initialized from the related environment variables.
-- The helper utility `util-refresh-readme.sh` does not update the original `README.md` files, but their clones `scrap_readme.md`. The content of these temporary files is intended to be copy-and-pasted to the **Docker Hub**.
+- The helper utility `util-refresh-readme.sh` does not update the original `README.md` files, but their clones named `scrap_readme.md`. The content of this temporary file is intended to be copy-and-pasted to the **Docker Hub**.
 
 Current versions:
+
 - Ubuntu **18.04.6**
 - Chrome **107.0.5304.121**
 - Chromium **107.0.5304.87**

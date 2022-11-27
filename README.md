@@ -24,6 +24,7 @@
     - [Description](#description)
     - [Git Hub subfolders / Docker image sets](#git-hub-subfolders--docker-image-sets)
       - [xubuntu-vnc-novnc](#xubuntu-vnc-novnc)
+      - [xubuntu-vnc-novnc-chrome](#xubuntu-vnc-novnc-chrome)
       - [xubuntu-vnc-novnc-chromium](#xubuntu-vnc-novnc-chromium)
       - [xubuntu-vnc-novnc-firefox](#xubuntu-vnc-novnc-firefox)
       - [utils](#utils)
@@ -46,18 +47,18 @@ If you want the **newer images** based on [Ubuntu 20.04 LTS][docker-ubuntu] with
 
 This file describes the **second version** (G2v2) of the project.
 
-The **first version** (G2v1, or simply G2) will still be available in this **GitHub** repository as the archived branch `archived-generation-g2v1`.
+The **first version** (G2v1, or simply G2) has been retired back in March 2022, but I've revived it in November 2022, because I've noticed, that the images still have been pulled. It will be available in this **GitHub** repository as the archived branch `archived-generation-g2v1`.
 
 The version `G2v2` brings the following changes comparing to the previous version `G2v1`:
 
 - The values of the **version sticker** variables (`VERSION_STICKER_*`) in the `env` hook scripts are not hardcoded, but initialized from the related environment variables.
-- The helper utility `util-refresh-readme.sh` does not update the original `README.md` files, but their clones `scrap_readme.md`. The content of these temporary files is intended to be copy-and-pasted to the **Docker Hub**.
+- The helper utility `util-refresh-readme.sh` does not update the original `README.md` files, but their clones named `scrap_readme.md`. The content of this temporary file is intended to be copy-and-pasted to the **Docker Hub**.
 
 ### Description
 
 The resources for the individual images and their variations are stored in the folders of the [Git Hub][this-github] repository and the image features are described in the individual README files. Additional descriptions can be found in the common project [Wiki][this-wiki].
 
-All images are part of a growing [image hierarchy][this-wiki-image-hierarchy].
+All images are part of the following [image hierarchy][this-wiki-image-hierarchy].
 
 ### Git Hub subfolders / Docker image sets
 
@@ -73,17 +74,29 @@ These base images already include commonly used utilities **ping**, **wget**, **
 
 Additional components and applications can be easily added by the user because **sudo** is supported.
 
+Check this [README][this-github-readme-xubuntu-vnc-novnc] file for more information.
+
+#### [xubuntu-vnc-novnc-chrome][this-github-xubuntu-vnc-novnc-chrome]
+
+Contains resources for building [accetto/xubuntu-vnc-novnc-chrome][this-docker-xubuntu-vnc-novnc-chrome] images with the [Google Chrome][chrome] web browser.
+
+Check this [README][this-github-readme-xubuntu-vnc-novnc-chrome] file for more information.
+
 #### [xubuntu-vnc-novnc-chromium][this-github-xubuntu-vnc-novnc-chromium]
   
 Contains resources for building [accetto/xubuntu-vnc-novnc-chromium][this-docker-xubuntu-vnc-novnc-chromium] images with the open-source [Chromium][chromium] web browser.
 
+Check this [README][this-github-readme-xubuntu-vnc-novnc-chromium] file for more information.
+
 #### [xubuntu-vnc-novnc-firefox][this-github-xubuntu-vnc-novnc-firefox]
   
-Contains resources for building [accetto/xubuntu-vnc-novnc-firefox][this-docker-xubuntu-vnc-novnc-firefox] images with the current [Firefox Quantum][firefox] web browser.
+Contains resources for building [accetto/xubuntu-vnc-novnc-firefox][this-docker-xubuntu-vnc-novnc-firefox] images with the current [Firefox][firefox] web browser.
 
 Several variations are available, including the one supporting easy pre-configuration and copying of personal Firefox user preferences.
 
 The images are streamlined and simplified versions of my other images [accetto/ubuntu-vnc-xfce-firefox-plus][accetto-docker-ubuntu-vnc-xfce-firefox-plus] and [accetto/ubuntu-vnc-xfce-firefox-default][accetto-docker-ubuntu-vnc-xfce-firefox-default].
+
+Check this [README][this-github-readme-xubuntu-vnc-novnc-firefox] file for more information.
 
 #### [utils][this-github-utils]
   
@@ -101,7 +114,7 @@ Contains utilities that make building the images more convenient.
   
   This script can be used for updating the `version sticker` badges in README files. It is intended for local use before publishing the repository.
 
-  The script does not include any help, because it takes only a single argument - the path where to start searching for files (default is `../docker`).
+  The script does not include any help, because it takes only a single argument - the path where to start searching for files (default is `../docker`). However, there is the file `local-building-example.md` explaining how to use it.
 
 ## Issues
 
@@ -130,11 +143,18 @@ Credit goes to all the countless people and companies, who contribute to open so
 [this-github-xubuntu-vnc-novnc]: https://github.com/accetto/xubuntu-vnc-novnc/tree/master/docker/xubuntu-vnc-novnc/
 [this-docker-xubuntu-vnc-novnc]: https://hub.docker.com/r/accetto/xubuntu-vnc-novnc/
 
+[this-github-xubuntu-vnc-novnc-chrome]: https://github.com/accetto/xubuntu-vnc-novnc/tree/master/docker/xubuntu-vnc-novnc-chrome/
 [this-github-xubuntu-vnc-novnc-chromium]: https://github.com/accetto/xubuntu-vnc-novnc/tree/master/docker/xubuntu-vnc-novnc-chromium/
+[this-docker-xubuntu-vnc-novnc-chrome]: https://hub.docker.com/r/accetto/xubuntu-vnc-novnc-chrome/
 [this-docker-xubuntu-vnc-novnc-chromium]: https://hub.docker.com/r/accetto/xubuntu-vnc-novnc-chromium/
 
 [this-github-xubuntu-vnc-novnc-firefox]: https://github.com/accetto/xubuntu-vnc-novnc/tree/master/docker/xubuntu-vnc-novnc-firefox/
 [this-docker-xubuntu-vnc-novnc-firefox]: https://hub.docker.com/r/accetto/xubuntu-vnc-novnc-firefox/
+
+[this-github-readme-xubuntu-vnc-novnc]: https://github.com/accetto/xubuntu-vnc-novnc/blob/master/docker/xubuntu-vnc-novnc/README.md
+[this-github-readme-xubuntu-vnc-novnc-chrome]: https://github.com/accetto/xubuntu-vnc-novnc/blob/master/docker/xubuntu-vnc-novnc-chrome/README.md
+[this-github-readme-xubuntu-vnc-novnc-chromium]: https://github.com/accetto/xubuntu-vnc-novnc/blob/master/docker/xubuntu-vnc-novnc-chromium/README.md
+[this-github-readme-xubuntu-vnc-novnc-firefox]: https://github.com/accetto/xubuntu-vnc-novnc/blob/master/docker/xubuntu-vnc-novnc-firefox/README.md
 
 [accetto-docker-ubuntu-vnc-xfce]: https://hub.docker.com/r/accetto/ubuntu-vnc-xfce
 [accetto-docker-ubuntu-vnc-xfce-firefox-default]: https://hub.docker.com/r/accetto/ubuntu-vnc-xfce-firefox-default
@@ -155,6 +175,8 @@ Credit goes to all the countless people and companies, who contribute to open so
 [docker-ubuntu]: https://hub.docker.com/_/ubuntu/
 
 [curl]: http://manpages.ubuntu.com/manpages/bionic/man1/curl.1.html
+[chrome]: https://www.google.com/chrome/
+[chromium]: https://www.chromium.org/Home
 [git]: https://git-scm.com/
 [inkscape]: https://inkscape.org/
 [jq]: https://stedolan.github.io/jq/
