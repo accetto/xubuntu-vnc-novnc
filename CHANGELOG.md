@@ -6,6 +6,20 @@
 
 ***
 
+### Release 23.01
+
+- `builder.sh` returns an exit code now
+- `noVNC` and `websockify` versions updated
+- `Chrome`, `Chromium` and `Firefox` versions updated
+
+Updated versions:
+
+- noVNC **1.3.0**
+- websockify **0.11.0**
+- Chrome **108.0.5359.124**
+- Chromium **108.0.5359.71**
+- Firefox **108.0**
+
 ### Release 22.11
 
 The repository has been revived, because I've noticed, that the images are still being pulled.
