@@ -6,6 +6,18 @@
 
 ***
 
+### Release 23.01.1
+
+- following this release:
+  - only the `latest` tags will be published on the `Docker Hub`
+  - images with the updated `Ubuntu`, `Chrome`, `Chromium` and `Firefox` versions will be published on the `Docker Hub` without creating parallel new releases on the `Git Hub`
+- fixes in the README files
+- explicit support for the `BuildKit` added, even if it's not strictly required
+
+Updated versions:
+
+- Firefox **108.0.1**
+
 ### Release 23.01
 
 - `builder.sh` returns an exit code now
