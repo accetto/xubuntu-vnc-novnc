@@ -70,14 +70,6 @@ The following image tags are regularly maintained and rebuilt:
 
     ![badge-VERSION_STICKER_LATEST][badge-VERSION_STICKER_LATEST]
 
-- `lab` is also based on `ubuntu:latest`, but built with `ARG_SUPPORT_USER_GROUP_OVERRIDE`
-
-    ![badge-VERSION_STICKER_LAB][badge-VERSION_STICKER_LAB]
-
-There are also archive images that are tagged like `ubuntu18.04.3` and similar. Those are previous production images and they can be useful for testing.
-
-Sometimes you can also spot tags like `dev`, `lab-dev` and similar. Those are temporary images under development and they should not be used.
-
 ### Dockerfiles
 
 The [Git Hub][this-github-xubuntu-vnc-novnc] repository contains several Dockerfiles that can be used to build the images.
@@ -351,7 +343,3 @@ Credit goes to all the countless people and companies, who contribute to open so
 <!-- latest tag badges -->
 
 [badge-VERSION_STICKER_LATEST]: https://badgen.net/badge/version%20sticker/ubuntu18.04.6/blue
-
-<!-- lab tag badges -->
-
-[badge-VERSION_STICKER_LAB]: https://badgen.net/badge/version%20sticker/ubuntu18.04.6/blue

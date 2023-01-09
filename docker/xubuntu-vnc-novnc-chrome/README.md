@@ -142,7 +142,7 @@ Credit goes to all the countless people and companies, who contribute to open so
 
 [this-issues]: https://github.com/accetto/xubuntu-vnc-novnc/issues
 
-[this-github-xubuntu-vnc-chrome]: https://github.com/accetto/xubuntu-vnc-novnc/tree/master/docker/xubuntu-vnc-novnc-chrome
+[this-github-xubuntu-vnc-novnc-chrome]: https://github.com/accetto/xubuntu-vnc-novnc/tree/master/docker/xubuntu-vnc-novnc-chrome
 
 [this-screenshot-container]: https://raw.githubusercontent.com/accetto/xubuntu-vnc-novnc/master/docker/xubuntu-vnc-novnc-chrome/xubuntu-vnc-novnc-chrome.jpg
 
@@ -162,6 +162,8 @@ Credit goes to all the countless people and companies, who contribute to open so
 [docker-doc]: https://docs.docker.com/
 [docker-doc-managing-data]: https://docs.docker.com/storage/
 
+[curl]: http://manpages.ubuntu.com/manpages/bionic/man1/curl.1.html
+[git]: https://git-scm.com/
 [jq]: https://stedolan.github.io/jq/
 [mousepad]: https://github.com/codebrainz/mousepad
 [nano]: https://www.nano-editor.org/

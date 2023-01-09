@@ -72,13 +72,9 @@ The history of notable changes is documented in the [CHANGELOG][this-changelog].
 
 The following image tags are regularly maintained and rebuilt:
 
-- `latest` is based on `accetto/xubuntu-vnc-novnc:latest`, it includes the **plus** features and it is built with the build argument **ARG_MOZ_FORCE_DISABLE_E10S**, so the Firefox multiprocess is **disabled** (see below)
+- `latest` is based on `accetto/xubuntu-vnc-novnc:latest` and it includes also the **plus** features
 
     ![badge-VERSION_STICKER_LATEST][badge-VERSION_STICKER_LATEST]
-
-- `default` is similar to `latest`, but it doesn't include the **plus** features
-
-    ![badge-VERSION_STICKER_DEFAULT][badge-VERSION_STICKER_DEFAULT]
 
 ### Dockerfiles
 
@@ -278,8 +274,4 @@ Credit goes to all the countless people and companies, who contribute to open so
 
 <!-- latest tag badges -->
 
-[badge-VERSION_STICKER_LATEST]: https://badgen.net/badge/version%20sticker/ubuntu18.04.6-firefox98.0/blue
-
-<!-- default tag badges -->
-
-[badge-VERSION_STICKER_DEFAULT]: https://badgen.net/badge/version%20sticker/ubuntu18.04.6-firefox98.0/blue
+[badge-VERSION_STICKER_LATEST]: https://badgen.net/badge/version%20sticker/ubuntu18.04.6-firefox108.0/blue
